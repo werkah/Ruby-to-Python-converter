@@ -40,7 +40,7 @@
 “LEFTBRACKET” | [
 “RIGHTBRACKET” | ]
 “AND” | \(and \| &&)
-“OR” | \(or \| ||)
+“OR” | \(or \| \|\|)
 “EQUAL” | =
 “PLUS” | +
 “MINUS” | -
