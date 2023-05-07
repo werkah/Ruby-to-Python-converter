@@ -2,73 +2,73 @@
 
 ## Tokeny
 
-|      Opis       |      Token      |
-| :--------------: | :------------: |
-|“DOT” | . |
-“COMMA” | ,
-“PIPELINE” | \|
-“BACKSLASH” | /
-“AT” | @
-“ATAT” | @@
-“DOLAR” | $
-“NEWLINE” | \n
-“HASH” | #
-“SEMICOLON” | ;
-“ID” |  [a-zA-Z_][a-zA-Z0-9_]* 
-“STRING” | [a-zA-Z0-9]* 
-“NUMBER” |  [0-9]+ | ([0-9]* DOT [0-9]+) 
-“COMMENT” |  [^\n]*
-“APOSTROPHE” | “
-“IF” | if
-“ELSIF” | elsif
-“ELSE” | else
-“UNLESS” | unless
-“CASE” | case
-“WHEN” | when
-“WHILE” | while
-“DO” | do
-“FOR” | for
-“IN” | in
-“UNTIL” | until
-“BEGIN” |begin
-“END” | end
-“PUTS” | puts
-“LEFTPAREN” | (
-“RIGHTPAREN” | )
-“LEFTBRACE” | {
-“RIGHTBRACE” | }
-“LEFTBRACKET” | [
-“RIGHTBRACKET” | ]
-“AND” | \(and \| &&)
-“OR” | \(or \| \|\|)
-“EQUAL” | =
-“PLUS” | +
-“MINUS” | -
-“MUL” | *
-“DIV” | \
-“MOD” | %
-“INTERJECT” | !
-“LEFTMINSIGN” | <
-“RIGHTMAXSIGN” | >
-“RETURN” | return
-“CLASS” | class
-“EQUALEQUAL” | ==
-“PLUSPLUS” | ++
-“MINUSMINUS” | –
-“MULMUL” | **
-“NOTEQUAL” |  !=
-“PLUSEQUAL” |  +=
-“MINUSEQUAL” |  -=
-“MULEQUAL” | *=
-“MULMULEQUAL” | **=
-“DIVIDEEQUAL” | /=
-“MODEQUAL” | %=
-“MORE” | >
-“LESS” | <
-“MOREEQUAL” | >=
-“LESSEQUAL” | <=
-“LESSEQUALMORE” | ⇔
-“EQUALEQUALEQUAL” | ===
+|       Opis        |            Token            |
+|:-----------------:|:---------------------------:|
+|       “DOT”       |              .              |
+|      “COMMA”      |              ,              |
+|    “PIPELINE”     |             \|              |
+|    “BACKSLASH”    |              /              |
+|       “AT”        |              @              |
+|      “ATAT”       |             @@              |
+|      “DOLAR”      |              $              |
+|     “NEWLINE”     |             \n              |
+|      “HASH”       |              #              |
+|    “SEMICOLON”    |              ;              |
+|       “ID”        |   [a-zA-Z_][a-zA-Z0-9_]*    |
+|     “STRING”      |        [a-zA-Z0-9]*         |
+|     “NUMBER”      | [0-9]+\|([0-9]* DOT [0-9]+) |
+|     “COMMENT”     |           [^\n]*            |
+|   “APOSTROPHE”    |              “              |
+|       “IF”        |             if              |
+|      “ELSIF”      |            elsif            |
+|      “ELSE”       |            else             |
+|     “UNLESS”      |           unless            |
+|      “CASE”       |            case             |
+|      “WHEN”       |            when             |
+|      “WHILE”      |            while            |
+|       “DO”        |             do              |
+|       “FOR”       |             for             |
+|       “IN”        |             in              |
+|      “UNTIL”      |            until            |
+|      “BEGIN”      |            begin            |
+|       “END”       |             end             |
+|      “PUTS”       |            puts             |
+|    “LEFTPAREN”    |              (              |
+|   “RIGHTPAREN”    |              )              |
+|    “LEFTBRACE”    |              {              |
+|   “RIGHTBRACE”    |              }              |
+|   “LEFTBRACKET”   |              [              |
+|  “RIGHTBRACKET”   |              ]              |
+|       “AND”       |        \(and \| &&)         |
+|       “OR”        |        \(or \| \|\|)        |
+|      “EQUAL”      |              =              |
+|      “PLUS”       |              +              |
+|      “MINUS”      |              -              |
+|       “MUL”       |              *              |
+|       “DIV”       |             \|              |
+|       “MOD”       |              %              |
+|    “INTERJECT”    |              !              |
+|   “LEFTMINSIGN”   |              <              |
+|  “RIGHTMAXSIGN”   |              >              |
+|     “RETURN”      |           return            |
+|      “CLASS”      |            class            |
+|   “EQUALEQUAL”    |             ==              |
+|    “PLUSPLUS”     |             ++              |
+|   “MINUSMINUS”    |              –              |
+|     “MULMUL”      |             **              |
+|    “NOTEQUAL”     |             !=              |
+|    “PLUSEQUAL”    |             +=              |
+|   “MINUSEQUAL”    |             -=              |
+|    “MULEQUAL”     |             *=              |
+|   “MULMULEQUAL”   |             **=             |
+|   “DIVIDEEQUAL”   |             /=              |
+|    “MODEQUAL”     |             %=              |
+|      “MORE”       |              >              |
+|      “LESS”       |              <              |
+|    “MOREEQUAL”    |             >=              |
+|    “LESSEQUAL”    |             <=              |
+|  “LESSEQUALMORE”  |              ⇔              |
+| “EQUALEQUALEQUAL” |             ===             |
 
 ## Gramatyka 
 
