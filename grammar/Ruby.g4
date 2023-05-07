@@ -2,9 +2,9 @@ grammar Ruby;
 
 //rules
 
-program: statementList;
+program: statementList | EOF;
 
-statementList: terminator | statement terminator | statementList statement terminator;
+statementList: statementList statement terminator  |statement terminator | terminator ;
 
 terminator: NEWLINE | SEMICOLON;
 
@@ -40,7 +40,7 @@ untilLoop: BEGIN loopBody END UNTIL condition;
 
 doUntilLoop: UNTIL condition DO loopBody END;
 
-comparisonOperator: MOREE | LESS | LESSEQUAL | MOREEQUAL | LESSEQUALMORE | EQUALEQUAL | NOTEQUAL | EQUALEQUALEQUAL;
+comparisonOperator: GREATER | LESS | LESSEQUAL | MOREEQUAL | LESSEQUALMORE | EQUALEQUAL | NOTEQUAL | EQUALEQUALEQUAL;
 
 operator: PLUS | MINUS | MUL | DIVIDE | MOD | MULMUL | PLUSPLUS | MINUSMINUS;
 
@@ -73,6 +73,8 @@ classObject: ID EQUAL ID DOT NEW (LEFTPAREN (ID | value | bool) (COMMA (ID | val
 methodCall: ID DOT functionCall;
 
 putsFunction: PUTS LEFTPAREN (ID | value | array | functionCall | methodCall) RIGHTPAREN;
+
+
 
 
 
@@ -122,7 +124,7 @@ MOD             : '%';
 MULMUL          : '**';
 PLUSPLUS        : '++';
 MINUSMINUS      : '--';
-MOREE            : '>';
+GREATER         : '>';
 LESS            : '<';
 LESSEQUAL       : '<=';
 MOREEQUAL       : '>=';
@@ -132,11 +134,12 @@ NOTEQUAL        : '!=';
 EQUALEQUALEQUAL : '===';
 EQUAL           : '=';
 DOT             : '.';
-ID              : '[a-zA-Z_][a-zA-Z0-9_]*';
-NUMBER          : '[0-9]+|([0-9]* DOT [0-9]+)';
-STRING          : '[a-zA-Z0-9_]*';
-COMMENT         : '[^\n]*';
+ID              : [a-zA-Z_][a-zA-Z0-9_]*;
+NUMBER          : [0-9]+|([0-9]* DOT [0-9]+);
+STRING          : [a-zA-Z0-9_]*;
+COMMENT         : [^\n]*;
 PUTS            : 'puts';
 NEW             : 'new';
 CLASS           : 'class';
+WHITE_SPACE : (' '|'\t')+ -> skip;
 
