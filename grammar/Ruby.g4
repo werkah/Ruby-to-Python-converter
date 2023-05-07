@@ -68,7 +68,7 @@ assignment: ID assignmentOperator (value | ID | array);
 
 class: CLASS ID (variables | function)* END;
 
-classObject: ID EQUAL ID DOT NEW (LEFTPAREN (ID | value | bool) (COMMA (ID | value | bool))*) RIGHTPAREN);
+classObject: ID EQUAL ID DOT NEW (LEFTPAREN (ID | value | bool) (COMMA (ID | value | bool))* RIGHTPAREN);
 
 methodCall: ID DOT functionCall;
 
