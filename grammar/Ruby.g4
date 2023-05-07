@@ -42,7 +42,7 @@ doUntilLoop: UNTIL condition DO loopBody END;
 
 comparisonOperator: MOREE | LESS | LESSEQUAL | MOREEQUAL | LESSEQUALMORE | EQUALEQUAL | NOTEQUAL | EQUALEQUALEQUAL;
 
-operator: PLUS | MINUS | MUL | DIVIDE | MOD | MULMUL;
+operator: PLUS | MINUS | MUL | DIVIDE | MOD | MULMUL | PLUSPLUS | MINUSMINUS;
 
 condition: (ID comparisonOperator value | value comparisonOperator value | ID comparisonOperator ID) ((AND | OR) (ID comparisonOperator value | value comparisonOperator value | ID comparisonOperator ID))*;
 
@@ -58,7 +58,7 @@ function: DEF ID (parameters)? loopBody (RETURN (ID | value | array) (COMMA (ID 
 
 parameters: LEFTPAREN ID (COMMA ID)* RIGHTPAREN;
 
-functionCall: ID (LEFTPAREN (ID | value | bool) (COMMA (ID | value | bool))*)? ;
+functionCall: ID (LEFTPAREN (ID | value | bool) (COMMA (ID | value | bool))* RIGHTPAREN)? ;
 
 assignmentOperator: PLUSEQUAL | MINUSEQUAL | MULEQUAL | MULMULEQUAL | DIVIDEEQUAL | MODEQUAL;
 
@@ -68,7 +68,7 @@ assignment: ID assignmentOperator (value | ID | array);
 
 class: CLASS ID (variables | function)* END;
 
-classObject: ID EQUAL ID DOT NEW (LEFTPAREN (ID | value | bool) (COMMA (ID | value | bool))*) RIGHTPAREN;
+classObject: ID EQUAL ID DOT NEW (LEFTPAREN (ID | value | bool) (COMMA (ID | value | bool))*) RIGHTPAREN);
 
 methodCall: ID DOT functionCall;
 
@@ -120,6 +120,8 @@ MUL             : '*';
 DIVIDE          : '/';
 MOD             : '%';
 MULMUL          : '**';
+PLUSPLUS        : '++';
+MINUSMINUS      : '--';
 MOREE            : '>';
 LESS            : '<';
 LESSEQUAL       : '<=';
