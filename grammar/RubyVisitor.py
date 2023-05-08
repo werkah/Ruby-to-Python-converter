@@ -29,6 +29,11 @@ class RubyVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by RubyParser#functions.
+    def visitFunctions(self, ctx:RubyParser.FunctionsContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by RubyParser#instructions.
     def visitInstructions(self, ctx:RubyParser.InstructionsContext):
         return self.visitChildren(ctx)
@@ -46,16 +51,6 @@ class RubyVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by RubyParser#type.
     def visitType(self, ctx:RubyParser.TypeContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by RubyParser#string.
-    def visitString(self, ctx:RubyParser.StringContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by RubyParser#comment.
-    def visitComment(self, ctx:RubyParser.CommentContext):
         return self.visitChildren(ctx)
 
 
@@ -149,6 +144,11 @@ class RubyVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by RubyParser#class.
+    def visitClass(self, ctx:RubyParser.ClassContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by RubyParser#functionCall.
     def visitFunctionCall(self, ctx:RubyParser.FunctionCallContext):
         return self.visitChildren(ctx)
@@ -169,11 +169,6 @@ class RubyVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by RubyParser#class.
-    def visitClass(self, ctx:RubyParser.ClassContext):
-        return self.visitChildren(ctx)
-
-
     # Visit a parse tree produced by RubyParser#classObject.
     def visitClassObject(self, ctx:RubyParser.ClassObjectContext):
         return self.visitChildren(ctx)
@@ -184,8 +179,8 @@ class RubyVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by RubyParser#putsFunction.
-    def visitPutsFunction(self, ctx:RubyParser.PutsFunctionContext):
+    # Visit a parse tree produced by RubyParser#crlf.
+    def visitCrlf(self, ctx:RubyParser.CrlfContext):
         return self.visitChildren(ctx)
 
 

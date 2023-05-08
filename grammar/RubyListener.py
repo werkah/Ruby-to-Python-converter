@@ -44,6 +44,15 @@ class RubyListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by RubyParser#functions.
+    def enterFunctions(self, ctx:RubyParser.FunctionsContext):
+        pass
+
+    # Exit a parse tree produced by RubyParser#functions.
+    def exitFunctions(self, ctx:RubyParser.FunctionsContext):
+        pass
+
+
     # Enter a parse tree produced by RubyParser#instructions.
     def enterInstructions(self, ctx:RubyParser.InstructionsContext):
         pass
@@ -77,24 +86,6 @@ class RubyListener(ParseTreeListener):
 
     # Exit a parse tree produced by RubyParser#type.
     def exitType(self, ctx:RubyParser.TypeContext):
-        pass
-
-
-    # Enter a parse tree produced by RubyParser#string.
-    def enterString(self, ctx:RubyParser.StringContext):
-        pass
-
-    # Exit a parse tree produced by RubyParser#string.
-    def exitString(self, ctx:RubyParser.StringContext):
-        pass
-
-
-    # Enter a parse tree produced by RubyParser#comment.
-    def enterComment(self, ctx:RubyParser.CommentContext):
-        pass
-
-    # Exit a parse tree produced by RubyParser#comment.
-    def exitComment(self, ctx:RubyParser.CommentContext):
         pass
 
 
@@ -260,6 +251,15 @@ class RubyListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by RubyParser#class.
+    def enterClass(self, ctx:RubyParser.ClassContext):
+        pass
+
+    # Exit a parse tree produced by RubyParser#class.
+    def exitClass(self, ctx:RubyParser.ClassContext):
+        pass
+
+
     # Enter a parse tree produced by RubyParser#functionCall.
     def enterFunctionCall(self, ctx:RubyParser.FunctionCallContext):
         pass
@@ -296,15 +296,6 @@ class RubyListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by RubyParser#class.
-    def enterClass(self, ctx:RubyParser.ClassContext):
-        pass
-
-    # Exit a parse tree produced by RubyParser#class.
-    def exitClass(self, ctx:RubyParser.ClassContext):
-        pass
-
-
     # Enter a parse tree produced by RubyParser#classObject.
     def enterClassObject(self, ctx:RubyParser.ClassObjectContext):
         pass
@@ -323,12 +314,12 @@ class RubyListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by RubyParser#putsFunction.
-    def enterPutsFunction(self, ctx:RubyParser.PutsFunctionContext):
+    # Enter a parse tree produced by RubyParser#crlf.
+    def enterCrlf(self, ctx:RubyParser.CrlfContext):
         pass
 
-    # Exit a parse tree produced by RubyParser#putsFunction.
-    def exitPutsFunction(self, ctx:RubyParser.PutsFunctionContext):
+    # Exit a parse tree produced by RubyParser#crlf.
+    def exitCrlf(self, ctx:RubyParser.CrlfContext):
         pass
 
 

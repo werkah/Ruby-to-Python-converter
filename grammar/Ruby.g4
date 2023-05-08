@@ -2,13 +2,15 @@ grammar Ruby;
 
 //rules
 
-program: statementList | EOF;
+program: statementList;
 
-statementList: statementList statement terminator  |statement terminator | terminator ;
+statementList: statement terminator |statementList statement terminator | terminator ; //czy do term crlf? np pusty program bez nowej linii
 
 terminator: NEWLINE | SEMICOLON;
 
-statement: function | COMMENT | instructions | loop | variables | functionCall | assignment | class | classObject | methodCall;
+statement: class | functions | instructions | loop | variables |  assignment  | classObject | methodCall|COMMENT;
+
+functions: function | functionCall;
 
 instructions: ifInstruction | unlessInstruction;
 
@@ -18,23 +20,21 @@ bool: TRUE | FALSE;
 
 type: AT | ATAT | DOLLAR;
 
-string: APOSTROPHE STRING APOSTROPHE;
-
-comment: HASH COMMENT;
+//comment: HASH COMMENT;
 
 array: LEFTBRACKET (value | bool) (COMMA (value | bool))* RIGTHBRACKET;
 
 value: NUMBER | STRING;
 
-ifInstruction: IF condition loopBody (ELSIF condition loopBody)* (ELSE loopBody)? END;
+ifInstruction: IF condition crlf loopBody (ELSIF condition crlf loopBody)* (ELSE crlf loopBody)? END;
 
 unlessInstruction: UNLESS condition loopBody (ELSE loopBody)? END;
 
-whileLoop: WHILE condition DO loopBody END;
+whileLoop: WHILE condition DO crlf loopBody END;
 
 doWhileLoop: BEGIN loopBody END WHILE condition;
 
-forLoop: FOR ID IN (array | value) loopBody END;
+forLoop: FOR ID IN ID crlf loopBody END;
 
 untilLoop: BEGIN loopBody END UNTIL condition;
 
@@ -46,33 +46,37 @@ operator: PLUS | MINUS | MUL | DIVIDE | MOD | MULMUL | PLUSPLUS | MINUSMINUS;
 
 condition: (ID comparisonOperator value | value comparisonOperator value | ID comparisonOperator ID) ((AND | OR) (ID comparisonOperator value | value comparisonOperator value | ID comparisonOperator ID))*;
 
-variables: (type)? ID EQUAL (value | ID | mathOperation | array);
+variables: (type)? ID EQUAL (value | ID | mathOperation | array)*;
 
 sign: PLUS | MINUS;
 
-mathOperation: (sign)? (ID | value | bracketExpression) operator (ID | value | bracketExpression);
+mathOperation: (sign)? (ID | value | bracketExpression) (operator (ID | value | bracketExpression))*;
 
 bracketExpression: LEFTPAREN mathOperation RIGHTPAREN;
 
-function: DEF ID (parameters)? loopBody (RETURN (ID | value | array) (COMMA (ID | value | array))*)? END;
+function: DEF ID (parameters)? crlf loopBody (RETURN (ID | value | array) (COMMA (ID | value | array))*)? END;
 
 parameters: LEFTPAREN ID (COMMA ID)* RIGHTPAREN;
 
-functionCall: ID (LEFTPAREN (ID | value | bool) (COMMA (ID | value | bool))* RIGHTPAREN)? ;
+class: CLASS ID crlf (variables | function)* crlf END;
+
+functionCall: ID (LEFTPAREN (ID | value | bool) (COMMA (ID | value | bool))* RIGHTPAREN)?;
 
 assignmentOperator: PLUSEQUAL | MINUSEQUAL | MULEQUAL | MULMULEQUAL | DIVIDEEQUAL | MODEQUAL;
 
-loopBody: statement+;
+loopBody: statement terminator;
 
 assignment: ID assignmentOperator (value | ID | array);
 
-class: CLASS ID (variables | function)* END;
+classObject: ID EQUAL ID DOT NEW (LEFTPAREN (ID | value | bool) (COMMA (ID | value | bool))* RIGHTPAREN)*;//?
 
-classObject: ID EQUAL ID DOT NEW (LEFTPAREN (ID | value | bool) (COMMA (ID | value | bool))* RIGHTPAREN);
+methodCall: ID DOT functionCall; //?
 
-methodCall: ID DOT functionCall;
+//putsFunction: PUTS LEFTPAREN (ID | value | array | functionCall | methodCall) RIGHTPAREN; //?
 
-putsFunction: PUTS LEFTPAREN (ID | value | array | functionCall | methodCall) RIGHTPAREN;
+crlf: NEWLINE;
+
+
 
 
 
@@ -91,6 +95,9 @@ BEGIN           : 'begin';
 UNTIL           : 'until';
 FOR             : 'for';
 IN              : 'in';
+//CLASSNAME       : [A-Z][a-zA-Z0-9_]*;
+NEW             : 'new';
+CLASS           : 'class';
 DEF             : 'def';
 RETURN          : 'return';
 AND             : 'and';
@@ -136,10 +143,7 @@ EQUAL           : '=';
 DOT             : '.';
 ID              : [a-zA-Z_][a-zA-Z0-9_]*;
 NUMBER          : [0-9]+|([0-9]* DOT [0-9]+);
-STRING          : [a-zA-Z0-9_]*;
-COMMENT         : [^\n]*;
+STRING          : '"'[a-zA-Z0-9_]*'"';
+COMMENT         : '#' ~[^\r\n]*; //SKIP?
 PUTS            : 'puts';
-NEW             : 'new';
-CLASS           : 'class';
 WHITE_SPACE : (' '|'\t')+ -> skip;
-
