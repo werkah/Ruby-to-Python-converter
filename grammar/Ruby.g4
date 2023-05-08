@@ -8,13 +8,13 @@ statementList: statement terminator |statementList statement terminator | termin
 
 terminator: NEWLINE | SEMICOLON;
 
-statement: class | functions | instructions | loop | variables |  assignment  | classObject | methodCall|COMMENT;
+statement: functions | instructions | loop | variables |  assignment  | classObject | methodCall | COMMENT;
 
 functions: function | functionCall;
 
 instructions: ifInstruction | unlessInstruction;
 
-loop: whileLoop | doWhileLoop | forLoop | untilLoop | doUntilLoop;
+loop: whileLoop |  forLoop | untilLoop;
 
 bool: TRUE | FALSE;
 
@@ -26,19 +26,15 @@ array: LEFTBRACKET (value | bool) (COMMA (value | bool))* RIGTHBRACKET;
 
 value: NUMBER | STRING;
 
-ifInstruction: IF condition crlf loopBody (ELSIF condition crlf loopBody)* (ELSE crlf loopBody)? END;
+ifInstruction: IF condition crlf loopBody (ELSIF condition crlf loopBody)* (ELSE crlf (loopBody | NEXT))? END;
 
-unlessInstruction: UNLESS condition loopBody (ELSE loopBody)? END;
+unlessInstruction: UNLESS condition loopBody (ELSE (loopBody|NEXT))? END;
 
 whileLoop: WHILE condition DO crlf loopBody END;
 
-doWhileLoop: BEGIN loopBody END WHILE condition;
-
 forLoop: FOR ID IN ID crlf loopBody END;
 
-untilLoop: BEGIN loopBody END UNTIL condition;
-
-doUntilLoop: UNTIL condition DO loopBody END;
+untilLoop: UNTIL condition DO loopBody END;
 
 comparisonOperator: GREATER | LESS | LESSEQUAL | MOREEQUAL | LESSEQUALMORE | EQUALEQUAL | NOTEQUAL | EQUALEQUALEQUAL;
 
@@ -60,7 +56,7 @@ parameters: LEFTPAREN ID (COMMA ID)* RIGHTPAREN;
 
 class: CLASS ID crlf (variables | function)* crlf END;
 
-functionCall: ID (LEFTPAREN (ID | value | bool) (COMMA (ID | value | bool))* RIGHTPAREN)?;
+functionCall: ID LEFTPAREN ((ID | value | bool) (COMMA (ID | value | bool))*) RIGHTPAREN;  //// jak poprawnie zapisac
 
 assignmentOperator: PLUSEQUAL | MINUSEQUAL | MULEQUAL | MULMULEQUAL | DIVIDEEQUAL | MODEQUAL;
 
@@ -148,3 +144,4 @@ COMMENT         : '#' ~[^\r\n]*; //SKIP?
 PUTS            : 'puts';
 WHITE_SPACE : (' '|'\t')+ -> skip;
 NIL : 'nil';
+NEXT : 'next';
