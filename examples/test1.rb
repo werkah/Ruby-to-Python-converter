@@ -1,8 +1,8 @@
-x = 1 * 8 -3
+x = (1 * 8) -3
 if x > 2
-   puts("x is greater than 2")
+   x+=1
 elsif x <= 2 and x!=0
-   puts("x is 1")
+   x-=1
 else
-   puts ("I can't guess the number")
+   x=0
 end

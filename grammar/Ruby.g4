@@ -46,7 +46,7 @@ operator: PLUS | MINUS | MUL | DIVIDE | MOD | MULMUL | PLUSPLUS | MINUSMINUS;
 
 condition: (ID comparisonOperator value | value comparisonOperator value | ID comparisonOperator ID) ((AND | OR) (ID comparisonOperator value | value comparisonOperator value | ID comparisonOperator ID))*;
 
-variables: (type)? ID EQUAL (value | ID | mathOperation | array)*;
+variables: (type)? ID EQUAL (value | ID | array | mathOperation);
 
 sign: PLUS | MINUS;
 
@@ -66,9 +66,9 @@ assignmentOperator: PLUSEQUAL | MINUSEQUAL | MULEQUAL | MULMULEQUAL | DIVIDEEQUA
 
 loopBody: statement terminator;
 
-assignment: ID assignmentOperator (value | ID | array);
+assignment: ID assignmentOperator (value | ID);
 
-classObject: ID EQUAL ID DOT NEW (LEFTPAREN (ID | value | bool) (COMMA (ID | value | bool))* RIGHTPAREN)*;//?
+classObject: ID EQUAL ID DOT NEW;
 
 methodCall: ID DOT functionCall; //?
 
@@ -147,3 +147,4 @@ STRING          : '"'[a-zA-Z0-9_]*'"';
 COMMENT         : '#' ~[^\r\n]*; //SKIP?
 PUTS            : 'puts';
 WHITE_SPACE : (' '|'\t')+ -> skip;
+NIL : 'nil';
