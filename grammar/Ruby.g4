@@ -4,11 +4,11 @@ grammar Ruby;
 
 program: statementList;
 
-statementList: statement terminator |statementList statement terminator | terminator ; //czy do term crlf? np pusty program bez nowej linii
+statementList: statement terminator |statementList statement terminator | terminator ;
 
 terminator: NEWLINE | SEMICOLON;
 
-statement: functions | instructions | loop | variables |  assignment  | classObject | methodCall | COMMENT;
+statement: functions | instructions | loop | variables |  assignment  | classObject | methodCall | COMMENT|putsFunction|class;
 
 functions: function | functionCall;
 
@@ -19,8 +19,6 @@ loop: whileLoop |  forLoop | untilLoop;
 bool: TRUE | FALSE;
 
 type: AT | ATAT | DOLLAR;
-
-//comment: HASH COMMENT;
 
 array: LEFTBRACKET (value | bool) (COMMA (value | bool))* RIGTHBRACKET;
 
@@ -34,15 +32,15 @@ whileLoop: WHILE condition DO crlf loopBody END;
 
 forLoop: FOR ID IN ID crlf loopBody END;
 
-untilLoop: UNTIL condition DO loopBody END;
+untilLoop: UNTIL condition DO crlf loopBody END;
 
 comparisonOperator: GREATER | LESS | LESSEQUAL | MOREEQUAL | LESSEQUALMORE | EQUALEQUAL | NOTEQUAL | EQUALEQUALEQUAL;
 
 operator: PLUS | MINUS | MUL | DIVIDE | MOD | MULMUL | PLUSPLUS | MINUSMINUS;
 
-condition: (ID comparisonOperator value | value comparisonOperator value | ID comparisonOperator ID) ((AND | OR) (ID comparisonOperator value | value comparisonOperator value | ID comparisonOperator ID))*;
+condition: (ID comparisonOperator (value|bool) | value comparisonOperator value | ID comparisonOperator ID) ((AND | OR) (ID comparisonOperator value | value comparisonOperator value | ID comparisonOperator ID))*;
 
-variables: (type)? ID EQUAL (value | ID | array | mathOperation);
+variables: (type)? ID EQUAL (value | ID | array | mathOperation|bool);
 
 sign: PLUS | MINUS;
 
@@ -50,35 +48,31 @@ mathOperation: (sign)? (ID | value | bracketExpression) (operator (ID | value | 
 
 bracketExpression: LEFTPAREN mathOperation RIGHTPAREN;
 
-function: DEF ID (parameters)? crlf loopBody (RETURN (ID | value | array) (COMMA (ID | value | array))*)? END;
+function: DEF ID (parameters)* crlf loopBody (RETURN (ID | value | array) (COMMA (ID | value | array))*)? END;
 
-parameters: LEFTPAREN ID (COMMA ID)* RIGHTPAREN;
+parameters: LEFTPAREN ((ID | value | bool) (COMMA (ID | value | bool))*) RIGHTPAREN;
 
-class: CLASS ID crlf (variables | function)* crlf END;
+class: CLASS CLASSNAME crlf classBody END;
 
-functionCall: ID LEFTPAREN ((ID | value | bool) (COMMA (ID | value | bool))*) RIGHTPAREN;  //// jak poprawnie zapisac
+classBody: ((variables | function) terminator)*;
+
+functionCall: ID (parameters)*;
 
 assignmentOperator: PLUSEQUAL | MINUSEQUAL | MULEQUAL | MULMULEQUAL | DIVIDEEQUAL | MODEQUAL;
 
-loopBody: statement terminator;
+loopBody: (statement terminator)*;
 
 assignment: ID assignmentOperator (value | ID);
 
-classObject: ID EQUAL ID DOT NEW;
+classObject: ID EQUAL CLASSNAME DOT NEW;
 
 methodCall: ID DOT functionCall; //?
 
-//putsFunction: PUTS LEFTPAREN (ID | value | array | functionCall | methodCall) RIGHTPAREN; //?
+putsFunction: PUTS LEFTPAREN (ID | value | array | functionCall | methodCall) RIGHTPAREN;
 
 crlf: NEWLINE;
 
-
-
-
-
-
-
-//keywords
+//tokens
 
 IF              : 'if';
 ELSIF           : 'elsif';
@@ -91,7 +85,8 @@ BEGIN           : 'begin';
 UNTIL           : 'until';
 FOR             : 'for';
 IN              : 'in';
-//CLASSNAME       : [A-Z][a-zA-Z0-9_]*;
+STRING          : '"'[a-zA-Z0-9]*'"';
+CLASSNAME       : [A-Z][a-zA-Z0-9_]*;
 NEW             : 'new';
 CLASS           : 'class';
 DEF             : 'def';
@@ -137,11 +132,10 @@ NOTEQUAL        : '!=';
 EQUALEQUALEQUAL : '===';
 EQUAL           : '=';
 DOT             : '.';
+PUTS            : 'puts';
 ID              : [a-zA-Z_][a-zA-Z0-9_]*;
 NUMBER          : [0-9]+|([0-9]* DOT [0-9]+);
-STRING          : '"'[a-zA-Z0-9_]*'"';
-COMMENT         : '#' ~[^\r\n]*; //SKIP?
-PUTS            : 'puts';
+COMMENT         : '#' ~[^\r\n]*;
 WHITE_SPACE : (' '|'\t')+ -> skip;
 NIL : 'nil';
 NEXT : 'next';

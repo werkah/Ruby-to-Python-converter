@@ -6,7 +6,6 @@ elsif x <= 2 and x!=0
 else
    x=0
 end
-
 x = 1
 unless x>=2
    puts("x is less than 2")

@@ -79,11 +79,6 @@ class RubyVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by RubyParser#doWhileLoop.
-    def visitDoWhileLoop(self, ctx:RubyParser.DoWhileLoopContext):
-        return self.visitChildren(ctx)
-
-
     # Visit a parse tree produced by RubyParser#forLoop.
     def visitForLoop(self, ctx:RubyParser.ForLoopContext):
         return self.visitChildren(ctx)
@@ -91,11 +86,6 @@ class RubyVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by RubyParser#untilLoop.
     def visitUntilLoop(self, ctx:RubyParser.UntilLoopContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by RubyParser#doUntilLoop.
-    def visitDoUntilLoop(self, ctx:RubyParser.DoUntilLoopContext):
         return self.visitChildren(ctx)
 
 
@@ -149,6 +139,11 @@ class RubyVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by RubyParser#classBody.
+    def visitClassBody(self, ctx:RubyParser.ClassBodyContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by RubyParser#functionCall.
     def visitFunctionCall(self, ctx:RubyParser.FunctionCallContext):
         return self.visitChildren(ctx)
@@ -176,6 +171,11 @@ class RubyVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by RubyParser#methodCall.
     def visitMethodCall(self, ctx:RubyParser.MethodCallContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by RubyParser#putsFunction.
+    def visitPutsFunction(self, ctx:RubyParser.PutsFunctionContext):
         return self.visitChildren(ctx)
 
 

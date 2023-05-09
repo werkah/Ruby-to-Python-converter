@@ -4,7 +4,6 @@ def test(a1, a2)
     else
       puts("a2 is bigger")
     end
-
     arrr=[1,5,7,8]
     for i in arrr
       if i> a1

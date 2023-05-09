@@ -134,15 +134,6 @@ class RubyListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by RubyParser#doWhileLoop.
-    def enterDoWhileLoop(self, ctx:RubyParser.DoWhileLoopContext):
-        pass
-
-    # Exit a parse tree produced by RubyParser#doWhileLoop.
-    def exitDoWhileLoop(self, ctx:RubyParser.DoWhileLoopContext):
-        pass
-
-
     # Enter a parse tree produced by RubyParser#forLoop.
     def enterForLoop(self, ctx:RubyParser.ForLoopContext):
         pass
@@ -158,15 +149,6 @@ class RubyListener(ParseTreeListener):
 
     # Exit a parse tree produced by RubyParser#untilLoop.
     def exitUntilLoop(self, ctx:RubyParser.UntilLoopContext):
-        pass
-
-
-    # Enter a parse tree produced by RubyParser#doUntilLoop.
-    def enterDoUntilLoop(self, ctx:RubyParser.DoUntilLoopContext):
-        pass
-
-    # Exit a parse tree produced by RubyParser#doUntilLoop.
-    def exitDoUntilLoop(self, ctx:RubyParser.DoUntilLoopContext):
         pass
 
 
@@ -260,6 +242,15 @@ class RubyListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by RubyParser#classBody.
+    def enterClassBody(self, ctx:RubyParser.ClassBodyContext):
+        pass
+
+    # Exit a parse tree produced by RubyParser#classBody.
+    def exitClassBody(self, ctx:RubyParser.ClassBodyContext):
+        pass
+
+
     # Enter a parse tree produced by RubyParser#functionCall.
     def enterFunctionCall(self, ctx:RubyParser.FunctionCallContext):
         pass
@@ -311,6 +302,15 @@ class RubyListener(ParseTreeListener):
 
     # Exit a parse tree produced by RubyParser#methodCall.
     def exitMethodCall(self, ctx:RubyParser.MethodCallContext):
+        pass
+
+
+    # Enter a parse tree produced by RubyParser#putsFunction.
+    def enterPutsFunction(self, ctx:RubyParser.PutsFunctionContext):
+        pass
+
+    # Exit a parse tree produced by RubyParser#putsFunction.
+    def exitPutsFunction(self, ctx:RubyParser.PutsFunctionContext):
         pass
 
 
