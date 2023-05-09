@@ -1,8 +1,9 @@
-def test(a1, a2)
+def test(a1, a2, a3)
+    puts(a3)
     if a1 > a2
-      puts("a1 is bigger")
+      puts("bigger")
     else
-      puts("a2 is bigger")
+      puts("smaller")
     end
     arrr=[1,5,7,8]
     for i in arrr
@@ -10,4 +11,4 @@ def test(a1, a2)
         puts(i)
       end
     end
-end
+end;

@@ -4,7 +4,7 @@ grammar Ruby;
 
 program: statementList;
 
-statementList: statement terminator |statementList statement terminator | terminator ;
+statementList: statement terminator |statementList statement terminator | terminator;
 
 terminator: NEWLINE | SEMICOLON;
 
@@ -26,7 +26,7 @@ value: NUMBER | STRING;
 
 ifInstruction: IF condition crlf loopBody (ELSIF condition crlf loopBody)* (ELSE crlf (loopBody | NEXT))? END;
 
-unlessInstruction: UNLESS condition loopBody (ELSE (loopBody|NEXT))? END;
+unlessInstruction: UNLESS condition loopBody (ELSE crlf (loopBody|NEXT))? END;
 
 whileLoop: WHILE condition DO crlf loopBody END;
 
