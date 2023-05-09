@@ -26,7 +26,7 @@ value: NUMBER | STRING;
 
 ifInstruction: IF condition crlf loopBody (ELSIF condition crlf loopBody)* (ELSE crlf (loopBody | NEXT))? END;
 
-unlessInstruction: UNLESS condition loopBody (ELSE crlf (loopBody|NEXT))? END;
+unlessInstruction: UNLESS condition crlf loopBody (ELSE crlf (loopBody|NEXT))? END;
 
 whileLoop: WHILE condition DO crlf loopBody END;
 
@@ -48,15 +48,15 @@ mathOperation: (sign)? (ID | value | bracketExpression) (operator (ID | value | 
 
 bracketExpression: LEFTPAREN mathOperation RIGHTPAREN;
 
-function: DEF ID (parameters)* crlf loopBody (RETURN (ID | value | array) (COMMA (ID | value | array))*)? END;
+function: DEF ID LEFTPAREN (parameters)* RIGHTPAREN crlf loopBody (RETURN (ID | value | array) (COMMA (ID | value | array))*)? END;
 
-parameters: LEFTPAREN ((ID | value | bool) (COMMA (ID | value | bool))*) RIGHTPAREN;
+parameters:(ID | value | bool)(COMMA (ID | value | bool))*; ///// jesli by byl mozna dac tu epsilon
 
 class: CLASS CLASSNAME crlf classBody END;
 
 classBody: ((variables | function) terminator)*;
 
-functionCall: ID (parameters)*;
+functionCall: ID LEFTPAREN (parameters)* RIGHTPAREN;
 
 assignmentOperator: PLUSEQUAL | MINUSEQUAL | MULEQUAL | MULMULEQUAL | DIVIDEEQUAL | MODEQUAL;
 
