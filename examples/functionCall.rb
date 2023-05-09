@@ -1,9 +1,9 @@
 def test(a1, a2, a3)
     puts(a3)
     if a1 > a2
-      puts("bigger")
+      puts("a1 is bigger than a2")
     else
-      puts("smaller")
+      puts("a1 is smaller than a2")
     end
     arrr=[1,5,7,8]
     for i in arrr

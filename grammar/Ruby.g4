@@ -85,7 +85,7 @@ BEGIN           : 'begin';
 UNTIL           : 'until';
 FOR             : 'for';
 IN              : 'in';
-STRING          : '"'[a-zA-Z0-9]*'"';
+STRING          : '"'[ \t\n\r\fa-zA-Z0-9]*'"';
 CLASSNAME       : [A-Z][a-zA-Z0-9_]*;
 NEW             : 'new';
 CLASS           : 'class';
