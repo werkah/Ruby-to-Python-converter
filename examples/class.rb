@@ -1,6 +1,6 @@
 class Sample
     @@i=0
-    def hello
+    def hello()
         puts("Hello")
     end
     def function(a, b)
