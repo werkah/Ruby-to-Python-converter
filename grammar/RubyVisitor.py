@@ -13,10 +13,17 @@ class RubyVisitor(ParseTreeVisitor):
     def visitProgram(self, ctx:RubyParser.ProgramContext):
         return self.visitChildren(ctx)
 
-
     # Visit a parse tree produced by RubyParser#statementList.
     def visitStatementList(self, ctx:RubyParser.StatementListContext):
-        return self.visitChildren(ctx)
+        result = []
+        for i in range(ctx.getChildCount()):
+            child = ctx.getChild(i)
+            if isinstance(child, TerminalNode):
+                continue
+            statement = self.visit(child)
+            if statement:
+                result.append(statement)
+        return '\n'.join(result)
 
 
     # Visit a parse tree produced by RubyParser#terminator.
@@ -25,23 +32,55 @@ class RubyVisitor(ParseTreeVisitor):
 
 
     # Visit a parse tree produced by RubyParser#statement.
-    def visitStatement(self, ctx:RubyParser.StatementContext):
-        return self.visitChildren(ctx)
+    def visitStatement(self, ctx: RubyParser.StatementContext):
+        if ctx.functions():
+            return self.visitFunctions(ctx.functions())
+        elif ctx.instructions():
+            return self.visitInstructions(ctx.instructions())
+        elif ctx.loop():
+            return self.visitLoop(ctx.loop())
+        elif ctx.variables():
+            return self.visitVariables(ctx.variables())
+        elif ctx.assignment():
+            return self.visitAssignment(ctx.assignment())
+        elif ctx.classObject():
+            return self.visitClassObject(ctx.classObject())
+        elif ctx.methodCall():
+            return self.visitMethodCall(ctx.methodCall())
+        elif ctx.COMMENT():
+            return f"{ctx.getText()}"
+        elif ctx.putsFunction():
+            return self.visitPutsFunction(ctx.putsFunction())
+        elif ctx.class_():
+            return self.visitClass_(ctx.class_())
+        else:
+            raise NotImplementedError(f"Not implemented: {ctx.getText()}")
 
 
     # Visit a parse tree produced by RubyParser#functions.
     def visitFunctions(self, ctx:RubyParser.FunctionsContext):
-        return self.visitChildren(ctx)
+        if ctx.function():
+            return self.visit(ctx.function())
+        else:
+            return self.visit(ctx.functionCall())
 
 
     # Visit a parse tree produced by RubyParser#instructions.
     def visitInstructions(self, ctx:RubyParser.InstructionsContext):
-        return self.visitChildren(ctx)
+        if ctx.ifInstruction():
+            return self.visit(ctx.ifInstruction())
+        else:
+            return self.visit(ctx.unlessInstruction())
 
 
     # Visit a parse tree produced by RubyParser#loop.
     def visitLoop(self, ctx:RubyParser.LoopContext):
-        return self.visitChildren(ctx)
+        if ctx.whileLoop():
+            return self.visit(ctx.whileLoop())
+        elif ctx.forLoop():
+            return self.visit(ctx.forLoop())
+        else:
+            return self.visit(ctx.untilLoop())
 
 
     # Visit a parse tree produced by RubyParser#bool.
@@ -60,8 +99,13 @@ class RubyVisitor(ParseTreeVisitor):
 
 
     # Visit a parse tree produced by RubyParser#value.
-    def visitValue(self, ctx:RubyParser.ValueContext):
-        return self.visitChildren(ctx)
+    def visitValue(self, ctx: RubyParser.ValueContext):
+        if ctx.NUMBER():
+            return float(ctx.NUMBER().getText()) if '.' in ctx.NUMBER().getText() else int(ctx.NUMBER().getText())
+        elif ctx.STRING():
+            return ctx.STRING().getText()
+        else:
+            return self.visitChildren(ctx)
 
 
     # Visit a parse tree produced by RubyParser#ifInstruction.
@@ -135,7 +179,7 @@ class RubyVisitor(ParseTreeVisitor):
 
 
     # Visit a parse tree produced by RubyParser#class.
-    def visitClass(self, ctx:RubyParser.ClassContext):
+    def visitClass_(self, ctx:RubyParser.ClassContext):
         return self.visitChildren(ctx)
 
 
@@ -175,8 +219,9 @@ class RubyVisitor(ParseTreeVisitor):
 
 
     # Visit a parse tree produced by RubyParser#putsFunction.
-    def visitPutsFunction(self, ctx:RubyParser.PutsFunctionContext):
-        return self.visitChildren(ctx)
+    def visitPutsFunction(self, ctx: RubyParser.PutsFunctionContext):
+        value = self.visit(ctx.getChild(2))
+        return f"print({value})"
 
 
     # Visit a parse tree produced by RubyParser#crlf.
