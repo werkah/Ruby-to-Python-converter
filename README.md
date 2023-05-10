@@ -101,7 +101,7 @@ parameters:(ID | value | bool)(COMMA (ID | value | bool))*;
 class: CLASS CLASSNAME crlf classBody END;
 classBody: ((variables | function) terminator)*;
 functionCall: ID LEFTPAREN (parameters)* RIGHTPAREN;
-assignmentOperator: PLUSEQUAL | MINUSEQUAL | MULEQUAL | MULMULEQUAL | DIVIDEEQUAL | MODEQUAL; //ok
+assignmentOperator: PLUSEQUAL | MINUSEQUAL | MULEQUAL | MULMULEQUAL | DIVIDEEQUAL | MODEQUAL; 
 loopBody: (statement terminator)*;
 assignment: ID assignmentOperator (value | ID); 
 classObject: ID EQUAL CLASSNAME DOT NEW;
