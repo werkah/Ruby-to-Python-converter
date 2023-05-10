@@ -8,7 +8,6 @@ IF              : 'if';
 ELSIF           : 'elsif';
 ELSE            : 'else';
 END             : 'end';
-UNLESS          : 'unless';
 DO              : 'do';
 WHILE           : 'while';
 BEGIN           : 'begin';
@@ -21,8 +20,6 @@ NEW             : 'new';
 CLASS           : 'class';
 DEF             : 'def';
 RETURN          : 'return';
-AND             : 'and';
-OR              : 'or';
 TRUE            : 'true';
 FALSE           : 'false';
 AT              : '@';
@@ -55,10 +52,8 @@ GREATER         : '>';
 LESS            : '<';
 LESSEQUAL       : '<=';
 MOREEQUAL       : '>=';
-LESSEQUALMORE   : '<=>';
 EQUALEQUAL      : '==';
 NOTEQUAL        : '!=';
-EQUALEQUALEQUAL : '===';
 EQUAL           : '=';
 DOT             : '.';
 PUTS            : 'puts';
@@ -66,8 +61,8 @@ ID              : [a-zA-Z_][a-zA-Z0-9_]*;
 NUMBER          : [0-9]+|([0-9]* DOT [0-9]+);
 COMMENT         : '#'~[^\r\n]*;
 WHITE_SPACE     : (' '|'\t')+ -> skip;
-NIL : 'nil';
-NEXT : 'next';
+NIL             : 'nil';
+NEXT            : 'next';
 ```
 
 ## Gramatyka 
