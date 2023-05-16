@@ -1,2 +1,3 @@
-puts("Ok")
+puts("Ok");
+
 #hello
