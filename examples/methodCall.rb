@@ -1,3 +1,4 @@
+puts(hello(2,5))
 class Sample
     @@i=0
     def hello()
