@@ -194,11 +194,6 @@ class RubyVisitor(ParseTreeVisitor):
             else:
                 res += str(self.visit(child))
         return res
-        # result = ""
-        # variable_name = ctx.ID()[0].getText()
-        # variable_value = self.visit(ctx.getChild(2))
-        # result += f"{variable_name} = {variable_value}"
-        # return result
 
 
     # Visit a parse tree produced by RubyParser#mathOperation.
@@ -210,15 +205,6 @@ class RubyVisitor(ParseTreeVisitor):
             else:
                 result += str(self.visit(child))
         return result
-        # result = ""
-        # result += str(self.visit(ctx.getChild(0)))
-        # for i in range(1, ctx.getChildCount()):
-        #     child = ctx.getChild(i)
-        #     if child.getChildCount() == 0:
-        #         result = child.getText()
-        #     else:
-        #         result += str(self.visit(child))
-        # return result
 
 
     # Visit a parse tree produced by RubyParser#bracketExpression.
@@ -246,13 +232,6 @@ class RubyVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by RubyParser#parameters.
     def visitParameters(self, ctx:RubyParser.ParametersContext): #ok
-        # result = ""
-        # for child in ctx.children:
-        #     if child.getChildCount() == 0:
-        #         result += child.getText()
-        #     else:
-        #         result += str(self.visit(child))
-        # return result
         result = ""
         for i in range(0, ctx.getChildCount()):
             result += ctx.getChild(i).getText()
@@ -260,26 +239,32 @@ class RubyVisitor(ParseTreeVisitor):
 
 
     # Visit a parse tree produced by RubyParser#class.
-    def visitClass(self, ctx:RubyParser.ClassContext):
-        return self.visitChildren(ctx)
+    def visitClass_(self, ctx:RubyParser.ClassContext):
+        class_name = ctx.CLASSNAME().getText()
+        class_body = str(self.visitClassBody(ctx.getChild(3)))
+        indent = "    "
+        result = f"class {class_name}:\n"
+        body_lines = class_body.strip().split("\n")
+        if body_lines:
+            result += "\n".join(indent + line for line in body_lines)
+        else:
+            result += indent + "pass"
+        return result
 
 
     # Visit a parse tree produced by RubyParser#classBody.
     def visitClassBody(self, ctx:RubyParser.ClassBodyContext):
-        return self.visitChildren(ctx)
+        res = ""
+        for child in ctx.children:
+            if child.getChildCount() == 0:
+                res += child.getText()
+            else:
+                res += str(self.visit(child))
+        return res
 
 
     # Visit a parse tree produced by RubyParser#functionCall.
     def visitFunctionCall(self, ctx:RubyParser.FunctionCallContext): #ok
-        # result = ""
-        # for child in ctx.children:
-        #     if child.getChildCount() == 0:
-        #         result += "("
-        #         result += child.getText()
-        #         result += ")"
-        #     else:
-        #         result += str(self.visit(child))
-        # return result
         result = ""
         result += ctx.getChild(0).getText()
         result += "("
@@ -359,19 +344,6 @@ class RubyVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by RubyParser#putsFunction.
     def visitPutsFunction(self, ctx:RubyParser.PutsFunctionContext): #ok
-        # result = ""
-        # for i in range(0, ctx.getChildCount()):
-        #     if ctx.getChild(i) == ctx.ID():
-        #         result += str(ctx.ID().getText())
-        #     elif ctx.getChild(i) == ctx.value():
-        #         result += str(self.visit(ctx.value()))
-        #     elif ctx.getChild(i) == ctx.array():
-        #         result += str(self.visit(ctx.array()))
-        #     elif ctx.getChild(i) == ctx.functionCall():
-        #         result += str(self.visit(ctx.functionCall()))
-        #     elif ctx.getChild(i) == ctx.methodCall():
-        #         result += str(self.visit(ctx.methodCall()))
-        # return f"print({result})"
         res = ""
         children = ctx.children
         for child in children:
@@ -381,12 +353,11 @@ class RubyVisitor(ParseTreeVisitor):
                 res += str(self.visit(child))
         if children[0].getText() == "puts":
             res = res.replace("puts", "print")
-
         return res
 
 
     # Visit a parse tree produced by RubyParser#crlf.
-    def visitCrlf(self, ctx:RubyParser.CrlfContext):
+    def visitCrlf(self, ctx:RubyParser.CrlfContext): #ok?
         return "\n"
 
 

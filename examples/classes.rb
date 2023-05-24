@@ -1,6 +1,6 @@
 puts(hello(2,5))
 class Sample
-    @@i=0
+    i=0
     def hello()
         puts("Hello")
     end
@@ -20,7 +20,6 @@ class Sample
         end
     end
 end
-# Now using above class to create objects
 object = Sample.new
 object.hello()
 object.function(1,2);

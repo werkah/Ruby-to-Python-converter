@@ -46,13 +46,13 @@ mathOperation: (ID | value | bracketExpression) (operator (ID | value | bracketE
 
 bracketExpression: LEFTPAREN mathOperation RIGHTPAREN;
 
-function: DEF ID LEFTPAREN parameters? RIGHTPAREN crlf loopBody (RETURN parameters)? crlf END;
+function: DEF ID LEFTPAREN parameters? RIGHTPAREN crlf loopBody (RETURN parameters crlf)? END;
 
 parameters:(ID | value | bool)(COMMA (ID | value | bool))*;
 
 class: CLASS CLASSNAME crlf classBody END;
 
-classBody: ((variables | function) terminator)*;
+classBody: ((variables | function) crlf)*;
 
 functionCall: ID LEFTPAREN parameters? RIGHTPAREN;
 
@@ -83,7 +83,7 @@ BEGIN           : 'begin';
 UNTIL           : 'until';
 FOR             : 'for';
 IN              : 'in';
-STRING          : '"'[ \t\n\r\fa-zA-Z0-9]*'"';
+STRING          : '"'[ \t\n\r\fa-zA-Z0-9=]*'"';
 CLASSNAME       : [A-Z][a-zA-Z0-9_]*;
 NEW             : 'new';
 CLASS           : 'class';
