@@ -1,6 +1,6 @@
-# Generated from C:\Users\wehil\PycharmProjects\Ruby-to-Python-converter\grammar\Ruby.g4 by ANTLR 4.12.0
+# Generated from C:\Users\wehil\PycharmProjects\Ruby-to-Python-converter\grammar\Ruby.g4 by ANTLR 4.13.0
 from antlr4 import *
-if __name__ is not None and "." in __name__:
+if "." in __name__:
     from .RubyParser import RubyParser
 else:
     from RubyParser import RubyParser
@@ -185,15 +185,6 @@ class RubyListener(ParseTreeListener):
 
     # Exit a parse tree produced by RubyParser#variables.
     def exitVariables(self, ctx:RubyParser.VariablesContext):
-        pass
-
-
-    # Enter a parse tree produced by RubyParser#sign.
-    def enterSign(self, ctx:RubyParser.SignContext):
-        pass
-
-    # Exit a parse tree produced by RubyParser#sign.
-    def exitSign(self, ctx:RubyParser.SignContext):
         pass
 
 

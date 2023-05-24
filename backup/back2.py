@@ -201,6 +201,8 @@ class RubyVisitor(ParseTreeVisitor):
         # return result
 
 
+
+
     # Visit a parse tree produced by RubyParser#mathOperation.
     def visitMathOperation(self, ctx:RubyParser.MathOperationContext): #ok
         result = ""
@@ -230,16 +232,11 @@ class RubyVisitor(ParseTreeVisitor):
     def visitFunction(self, ctx:RubyParser.FunctionContext):
         function_name = ctx.getChild(1).getText()
         parameters = (self.visitParameters(ctx.getChild(3)))
-        body = str(self.visitLoopBody(ctx.getChild(6)))
-        indent = "    "
+        body = str(self.visitLoopBody(ctx.loopBody()))
         result = f"def {function_name}({parameters}):\n"
-        body_lines = body.strip().split("\n")
-        if body_lines:
-            result += "\n".join(indent + line for line in body_lines)
-        else:
-            result += indent + "pass"
+        result += f"    {body}"
         if ctx.RETURN() is not None:
-            return_value = (self.visitParameters(ctx.getChild(8)))
+            return_value = (self.visitParameters(ctx.getChild(9)))
             result += f"\n    return {return_value}"
         return result
 
@@ -307,13 +304,10 @@ class RubyVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by RubyParser#loopBody.
     def visitLoopBody(self, ctx:RubyParser.LoopBodyContext): #ok
-        res = ""
-        for child in ctx.children:
-            if child.getChildCount() == 0:
-                res += child.getText()
-            else:
-                res += str(self.visit(child))
-        return res
+        result = ""
+        for i in range(0, ctx.getChildCount()):
+            result += ctx.getChild(i).getText()
+        return result
 
 
     # Visit a parse tree produced by RubyParser#assignment.

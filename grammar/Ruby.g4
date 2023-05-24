@@ -8,7 +8,7 @@ statementList: statement terminator |statementList statement terminator | termin
 
 terminator: NEWLINE | SEMICOLON;
 
-statement: functions | instructions | loop | variables |  assignment  | classObject | methodCall | COMMENT|putsFunction|class;
+statement: functions | instructions | loop | variables |  assignment  | classObject | methodCall | COMMENT | putsFunction | class;
 
 functions: function | functionCall;
 
@@ -42,31 +42,29 @@ condition: (ID comparisonOperator (value|bool) | value comparisonOperator value 
 
 variables: (type)? ID EQUAL (value | ID | array | mathOperation|bool);
 
-sign: PLUS | MINUS;
-
-mathOperation: (sign)? (ID | value | bracketExpression) (operator (ID | value | bracketExpression))*;
+mathOperation: (ID | value | bracketExpression) (operator (ID | value | bracketExpression))*;
 
 bracketExpression: LEFTPAREN mathOperation RIGHTPAREN;
 
-function: DEF ID LEFTPAREN (parameters)* RIGHTPAREN crlf loopBody (RETURN (ID | value | array) (COMMA (ID | value | array))*)? END;
+function: DEF ID LEFTPAREN parameters? RIGHTPAREN crlf loopBody (RETURN parameters)? crlf END;
 
-parameters:(ID | value | bool)(COMMA (ID | value | bool))*; ///// jesli by byl mozna dac tu epsilon
+parameters:(ID | value | bool)(COMMA (ID | value | bool))*;
 
 class: CLASS CLASSNAME crlf classBody END;
 
 classBody: ((variables | function) terminator)*;
 
-functionCall: ID LEFTPAREN (parameters)* RIGHTPAREN;
+functionCall: ID LEFTPAREN parameters? RIGHTPAREN;
 
 assignmentOperator: PLUSEQUAL | MINUSEQUAL | MULEQUAL | MULMULEQUAL | DIVIDEEQUAL | MODEQUAL;
 
-loopBody: (statement terminator)*;
+loopBody: (statement crlf)*;
 
 assignment: ID assignmentOperator (value | ID);
 
 classObject: ID EQUAL CLASSNAME DOT NEW;
 
-methodCall: ID DOT functionCall; //?
+methodCall: ID DOT functionCall;
 
 putsFunction: PUTS LEFTPAREN (ID | value | array | functionCall | methodCall) RIGHTPAREN;
 
@@ -112,7 +110,7 @@ PLUSEQUAL       : '+=';
 MINUSEQUAL      : '-=';
 MULEQUAL        : '*=';
 DIVIDEEQUAL     : '/=';
-MODEQUAL       : '%=';
+MODEQUAL        : '%=';
 MULMULEQUAL     : '**=';
 PLUS            : '+';
 MINUS           : '-';
@@ -135,7 +133,7 @@ DOT             : '.';
 PUTS            : 'puts';
 ID              : [a-zA-Z_][a-zA-Z0-9_]*;
 NUMBER          : [0-9]+|([0-9]* DOT [0-9]+);
-COMMENT         : '#' ~[^\r\n]*;
-WHITE_SPACE : (' '|'\t')+ -> skip;
+COMMENT         : '#'~[^\r\n]*;
+WHITE_SPACE     : (' '|'\t')+ -> skip;
 NIL : 'nil';
 NEXT : 'next';
