@@ -24,9 +24,13 @@ array: LEFTBRACKET (value | bool) (COMMA (value | bool))* RIGTHBRACKET;
 
 value: NUMBER | STRING;
 
-ifInstruction: IF condition crlf loopBody (ELSIF condition crlf loopBody)* (ELSE crlf (loopBody | NEXT))? END;
+ifInstruction: IF condition crlf loopBody elsifInstruction* elseInstruction? END;
 
-unlessInstruction: UNLESS condition crlf loopBody (ELSE crlf (loopBody|NEXT))? END;
+elseInstruction: ELSE crlf (loopBody|NEXT);
+
+elsifInstruction: ELSIF condition crlf loopBody;
+
+unlessInstruction: UNLESS condition crlf loopBody elseInstruction? END;
 
 whileLoop: WHILE condition DO crlf loopBody END;
 
@@ -89,8 +93,8 @@ NEW             : 'new';
 CLASS           : 'class';
 DEF             : 'def';
 RETURN          : 'return';
-AND             : 'and';
-OR              : 'or';
+AND             : ' and ';
+OR              : ' or ';
 TRUE            : 'true';
 FALSE           : 'false';
 

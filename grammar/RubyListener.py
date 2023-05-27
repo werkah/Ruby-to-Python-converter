@@ -116,6 +116,24 @@ class RubyListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by RubyParser#elseInstruction.
+    def enterElseInstruction(self, ctx:RubyParser.ElseInstructionContext):
+        pass
+
+    # Exit a parse tree produced by RubyParser#elseInstruction.
+    def exitElseInstruction(self, ctx:RubyParser.ElseInstructionContext):
+        pass
+
+
+    # Enter a parse tree produced by RubyParser#elsifInstruction.
+    def enterElsifInstruction(self, ctx:RubyParser.ElsifInstructionContext):
+        pass
+
+    # Exit a parse tree produced by RubyParser#elsifInstruction.
+    def exitElsifInstruction(self, ctx:RubyParser.ElsifInstructionContext):
+        pass
+
+
     # Enter a parse tree produced by RubyParser#unlessInstruction.
     def enterUnlessInstruction(self, ctx:RubyParser.UnlessInstructionContext):
         pass
