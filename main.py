@@ -4,7 +4,7 @@ from grammar.RubyParser import RubyParser
 from grammar.RubyVisitor import RubyVisitor
 
 def main():
-    inp = FileStream("examples/puts.rb")
+    inp = FileStream("examples/mathOperations.rb")
     lexer = RubyLexer(inp)
     stream = CommonTokenStream(lexer)
 
