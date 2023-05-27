@@ -215,18 +215,31 @@ class RubyVisitor(ParseTreeVisitor):
     # Visit a parse tree produced by RubyParser#function.
     def visitFunction(self, ctx:RubyParser.FunctionContext):
         function_name = ctx.getChild(1).getText()
-        parameters = (self.visitParameters(ctx.getChild(3)))
-        body = str(self.visitLoopBody(ctx.getChild(6)))
-        indent = "    "
-        result = f"def {function_name}({parameters}):\n"
-        body_lines = body.strip().split("\n")
-        if body_lines:
-            result += "\n".join(indent + line for line in body_lines)
+        if self.visitParameters(ctx.getChild(3)) != "":
+            parameters = (self.visitParameters(ctx.getChild(3)))
+            body = str(self.visitLoopBody(ctx.getChild(6)))
+            indent = "    "
+            result = f"def {function_name}({parameters}):\n"
+            body_lines = body.strip().split("\n")
+            if body_lines:
+                result += "\n".join(indent + line for line in body_lines)
+            else:
+                result += indent + "pass"
+            if ctx.RETURN() is not None:
+                return_value = (self.visitParameters(ctx.getChild(8)))
+                result += f"\n    return {return_value}"
         else:
-            result += indent + "pass"
-        if ctx.RETURN() is not None:
-            return_value = (self.visitParameters(ctx.getChild(8)))
-            result += f"\n    return {return_value}"
+            body = str(self.visitLoopBody(ctx.getChild(5)))
+            indent = "    "
+            result = f"def {function_name}():\n"
+            body_lines = body.strip().split("\n")
+            if body_lines:
+                result += "\n".join(indent + line for line in body_lines)
+            else:
+                result += indent + "pass"
+            if ctx.RETURN() is not None:
+                return_value = (self.visitParameters(ctx.getChild(7)))
+                result += f"\n    return {return_value}"
         return result
 
 
