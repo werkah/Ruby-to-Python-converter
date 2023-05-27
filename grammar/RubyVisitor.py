@@ -77,12 +77,11 @@ class RubyVisitor(ParseTreeVisitor):
             return self.visit(ctx.untilLoop())
 
     # Visit a parse tree produced by RubyParser#bool.
-    def visitBool(self, ctx: RubyParser.BoolContext):  # ok
-        return ctx.getText()[0].upper() + ctx.getText()[1:]
-
-    # Visit a parse tree produced by RubyParser#type.
-    def visitType(self, ctx: RubyParser.TypeContext):  # usunac
-        return self.visitChildren(ctx)
+    def visitBool(self, ctx: RubyParser.BoolContext):
+        if ctx.NIL():
+            return "None"
+        else:
+            ctx.getText()[0].upper() + ctx.getText()[1:]
 
     # Visit a parse tree produced by RubyParser#array.
     def visitArray(self, ctx: RubyParser.ArrayContext):  # ok ale czy da sie zejsc nizej?

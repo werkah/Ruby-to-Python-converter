@@ -80,15 +80,6 @@ class RubyListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by RubyParser#type.
-    def enterType(self, ctx:RubyParser.TypeContext):
-        pass
-
-    # Exit a parse tree produced by RubyParser#type.
-    def exitType(self, ctx:RubyParser.TypeContext):
-        pass
-
-
     # Enter a parse tree produced by RubyParser#array.
     def enterArray(self, ctx:RubyParser.ArrayContext):
         pass

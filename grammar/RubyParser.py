@@ -10,137 +10,134 @@ else:
 
 def serializedATN():
     return [
-        4,1,64,366,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
+        4,1,64,359,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
         6,2,7,7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,2,12,7,12,2,13,7,13,
         2,14,7,14,2,15,7,15,2,16,7,16,2,17,7,17,2,18,7,18,2,19,7,19,2,20,
         7,20,2,21,7,21,2,22,7,22,2,23,7,23,2,24,7,24,2,25,7,25,2,26,7,26,
         2,27,7,27,2,28,7,28,2,29,7,29,2,30,7,30,2,31,7,31,2,32,7,32,2,33,
-        7,33,2,34,7,34,2,35,7,35,1,0,1,0,1,1,1,1,1,1,1,1,1,1,3,1,80,8,1,
-        1,1,1,1,1,1,1,1,5,1,86,8,1,10,1,12,1,89,9,1,1,2,1,2,1,3,1,3,1,3,
-        1,3,1,3,1,3,1,3,1,3,1,3,1,3,3,3,103,8,3,1,4,1,4,3,4,107,8,4,1,5,
-        1,5,3,5,111,8,5,1,6,1,6,1,6,3,6,116,8,6,1,7,1,7,1,8,1,8,1,9,1,9,
-        1,9,3,9,125,8,9,1,9,1,9,1,9,3,9,130,8,9,5,9,132,8,9,10,9,12,9,135,
-        9,9,1,9,1,9,1,10,1,10,1,11,1,11,1,11,1,11,1,11,5,11,146,8,11,10,
-        11,12,11,149,9,11,1,11,3,11,152,8,11,1,11,1,11,1,12,1,12,1,12,1,
-        12,3,12,160,8,12,1,13,1,13,1,13,1,13,1,13,1,14,1,14,1,14,1,14,1,
-        14,3,14,172,8,14,1,14,1,14,1,15,1,15,1,15,1,15,1,15,1,15,1,15,1,
-        16,1,16,1,16,1,16,1,16,1,16,1,16,1,16,1,17,1,17,1,17,1,17,1,17,1,
-        17,1,17,1,18,1,18,1,19,1,19,1,20,1,20,1,20,1,20,3,20,206,8,20,1,
-        20,1,20,1,20,1,20,1,20,1,20,1,20,1,20,3,20,216,8,20,1,20,1,20,1,
-        20,1,20,1,20,1,20,1,20,1,20,1,20,1,20,1,20,1,20,1,20,3,20,231,8,
-        20,5,20,233,8,20,10,20,12,20,236,9,20,1,21,3,21,239,8,21,1,21,1,
-        21,1,21,1,21,1,21,1,21,1,21,3,21,248,8,21,1,22,1,22,1,22,3,22,253,
-        8,22,1,22,1,22,1,22,1,22,3,22,259,8,22,5,22,261,8,22,10,22,12,22,
-        264,9,22,1,23,1,23,1,23,1,23,1,24,1,24,1,24,1,24,3,24,274,8,24,1,
-        24,1,24,1,24,1,24,1,24,1,24,1,24,3,24,283,8,24,1,24,1,24,1,25,1,
-        25,1,25,3,25,290,8,25,1,25,1,25,1,25,1,25,3,25,296,8,25,5,25,298,
-        8,25,10,25,12,25,301,9,25,1,26,1,26,1,26,1,26,1,26,1,26,1,27,1,27,
-        3,27,311,8,27,1,27,1,27,5,27,315,8,27,10,27,12,27,318,9,27,1,28,
-        1,28,1,28,3,28,323,8,28,1,28,1,28,1,29,1,29,1,30,1,30,1,30,5,30,
-        332,8,30,10,30,12,30,335,9,30,1,31,1,31,1,31,1,31,3,31,341,8,31,
-        1,32,1,32,1,32,1,32,1,32,1,32,1,33,1,33,1,33,1,33,1,34,1,34,1,34,
-        1,34,1,34,1,34,1,34,3,34,360,8,34,1,34,1,34,1,35,1,35,1,35,0,1,2,
-        36,0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,
-        44,46,48,50,52,54,56,58,60,62,64,66,68,70,0,8,1,0,32,33,1,0,20,21,
-        1,0,22,24,2,0,12,12,60,60,1,0,48,55,1,0,40,47,1,0,18,19,1,0,34,39,
-        383,0,72,1,0,0,0,2,79,1,0,0,0,4,90,1,0,0,0,6,102,1,0,0,0,8,106,1,
-        0,0,0,10,110,1,0,0,0,12,115,1,0,0,0,14,117,1,0,0,0,16,119,1,0,0,
-        0,18,121,1,0,0,0,20,138,1,0,0,0,22,140,1,0,0,0,24,155,1,0,0,0,26,
-        161,1,0,0,0,28,166,1,0,0,0,30,175,1,0,0,0,32,182,1,0,0,0,34,190,
-        1,0,0,0,36,197,1,0,0,0,38,199,1,0,0,0,40,215,1,0,0,0,42,238,1,0,
-        0,0,44,252,1,0,0,0,46,265,1,0,0,0,48,269,1,0,0,0,50,289,1,0,0,0,
-        52,302,1,0,0,0,54,316,1,0,0,0,56,319,1,0,0,0,58,326,1,0,0,0,60,333,
-        1,0,0,0,62,336,1,0,0,0,64,342,1,0,0,0,66,348,1,0,0,0,68,352,1,0,
-        0,0,70,363,1,0,0,0,72,73,3,2,1,0,73,1,1,0,0,0,74,75,6,1,-1,0,75,
-        76,3,6,3,0,76,77,3,4,2,0,77,80,1,0,0,0,78,80,3,4,2,0,79,74,1,0,0,
-        0,79,78,1,0,0,0,80,87,1,0,0,0,81,82,10,2,0,0,82,83,3,6,3,0,83,84,
-        3,4,2,0,84,86,1,0,0,0,85,81,1,0,0,0,86,89,1,0,0,0,87,85,1,0,0,0,
-        87,88,1,0,0,0,88,3,1,0,0,0,89,87,1,0,0,0,90,91,7,0,0,0,91,5,1,0,
-        0,0,92,103,3,8,4,0,93,103,3,10,5,0,94,103,3,12,6,0,95,103,3,42,21,
-        0,96,103,3,62,31,0,97,103,3,64,32,0,98,103,3,66,33,0,99,103,5,61,
-        0,0,100,103,3,68,34,0,101,103,3,52,26,0,102,92,1,0,0,0,102,93,1,
-        0,0,0,102,94,1,0,0,0,102,95,1,0,0,0,102,96,1,0,0,0,102,97,1,0,0,
-        0,102,98,1,0,0,0,102,99,1,0,0,0,102,100,1,0,0,0,102,101,1,0,0,0,
-        103,7,1,0,0,0,104,107,3,48,24,0,105,107,3,56,28,0,106,104,1,0,0,
-        0,106,105,1,0,0,0,107,9,1,0,0,0,108,111,3,22,11,0,109,111,3,28,14,
-        0,110,108,1,0,0,0,110,109,1,0,0,0,111,11,1,0,0,0,112,116,3,30,15,
-        0,113,116,3,32,16,0,114,116,3,34,17,0,115,112,1,0,0,0,115,113,1,
-        0,0,0,115,114,1,0,0,0,116,13,1,0,0,0,117,118,7,1,0,0,118,15,1,0,
-        0,0,119,120,7,2,0,0,120,17,1,0,0,0,121,124,5,29,0,0,122,125,3,20,
-        10,0,123,125,3,14,7,0,124,122,1,0,0,0,124,123,1,0,0,0,125,133,1,
-        0,0,0,126,129,5,31,0,0,127,130,3,20,10,0,128,130,3,14,7,0,129,127,
-        1,0,0,0,129,128,1,0,0,0,130,132,1,0,0,0,131,126,1,0,0,0,132,135,
-        1,0,0,0,133,131,1,0,0,0,133,134,1,0,0,0,134,136,1,0,0,0,135,133,
-        1,0,0,0,136,137,5,30,0,0,137,19,1,0,0,0,138,139,7,3,0,0,139,21,1,
-        0,0,0,140,141,5,1,0,0,141,142,3,40,20,0,142,143,3,70,35,0,143,147,
-        3,60,30,0,144,146,3,26,13,0,145,144,1,0,0,0,146,149,1,0,0,0,147,
-        145,1,0,0,0,147,148,1,0,0,0,148,151,1,0,0,0,149,147,1,0,0,0,150,
-        152,3,24,12,0,151,150,1,0,0,0,151,152,1,0,0,0,152,153,1,0,0,0,153,
-        154,5,4,0,0,154,23,1,0,0,0,155,156,5,3,0,0,156,159,3,70,35,0,157,
-        160,3,60,30,0,158,160,5,64,0,0,159,157,1,0,0,0,159,158,1,0,0,0,160,
-        25,1,0,0,0,161,162,5,2,0,0,162,163,3,40,20,0,163,164,3,70,35,0,164,
-        165,3,60,30,0,165,27,1,0,0,0,166,167,5,5,0,0,167,168,3,40,20,0,168,
-        169,3,70,35,0,169,171,3,60,30,0,170,172,3,24,12,0,171,170,1,0,0,
-        0,171,172,1,0,0,0,172,173,1,0,0,0,173,174,5,4,0,0,174,29,1,0,0,0,
-        175,176,5,7,0,0,176,177,3,40,20,0,177,178,5,6,0,0,178,179,3,70,35,
-        0,179,180,3,60,30,0,180,181,5,4,0,0,181,31,1,0,0,0,182,183,5,10,
-        0,0,183,184,5,59,0,0,184,185,5,11,0,0,185,186,5,59,0,0,186,187,3,
-        70,35,0,187,188,3,60,30,0,188,189,5,4,0,0,189,33,1,0,0,0,190,191,
-        5,9,0,0,191,192,3,40,20,0,192,193,5,6,0,0,193,194,3,70,35,0,194,
-        195,3,60,30,0,195,196,5,4,0,0,196,35,1,0,0,0,197,198,7,4,0,0,198,
-        37,1,0,0,0,199,200,7,5,0,0,200,39,1,0,0,0,201,202,5,59,0,0,202,205,
-        3,36,18,0,203,206,3,20,10,0,204,206,3,14,7,0,205,203,1,0,0,0,205,
-        204,1,0,0,0,206,216,1,0,0,0,207,208,3,20,10,0,208,209,3,36,18,0,
-        209,210,3,20,10,0,210,216,1,0,0,0,211,212,5,59,0,0,212,213,3,36,
-        18,0,213,214,5,59,0,0,214,216,1,0,0,0,215,201,1,0,0,0,215,207,1,
-        0,0,0,215,211,1,0,0,0,216,234,1,0,0,0,217,230,7,6,0,0,218,219,5,
-        59,0,0,219,220,3,36,18,0,220,221,3,20,10,0,221,231,1,0,0,0,222,223,
-        3,20,10,0,223,224,3,36,18,0,224,225,3,20,10,0,225,231,1,0,0,0,226,
-        227,5,59,0,0,227,228,3,36,18,0,228,229,5,59,0,0,229,231,1,0,0,0,
-        230,218,1,0,0,0,230,222,1,0,0,0,230,226,1,0,0,0,231,233,1,0,0,0,
-        232,217,1,0,0,0,233,236,1,0,0,0,234,232,1,0,0,0,234,235,1,0,0,0,
-        235,41,1,0,0,0,236,234,1,0,0,0,237,239,3,16,8,0,238,237,1,0,0,0,
-        238,239,1,0,0,0,239,240,1,0,0,0,240,241,5,59,0,0,241,247,5,56,0,
-        0,242,248,3,20,10,0,243,248,5,59,0,0,244,248,3,18,9,0,245,248,3,
-        44,22,0,246,248,3,14,7,0,247,242,1,0,0,0,247,243,1,0,0,0,247,244,
-        1,0,0,0,247,245,1,0,0,0,247,246,1,0,0,0,248,43,1,0,0,0,249,253,5,
-        59,0,0,250,253,3,20,10,0,251,253,3,46,23,0,252,249,1,0,0,0,252,250,
-        1,0,0,0,252,251,1,0,0,0,253,262,1,0,0,0,254,258,3,38,19,0,255,259,
-        5,59,0,0,256,259,3,20,10,0,257,259,3,46,23,0,258,255,1,0,0,0,258,
-        256,1,0,0,0,258,257,1,0,0,0,259,261,1,0,0,0,260,254,1,0,0,0,261,
-        264,1,0,0,0,262,260,1,0,0,0,262,263,1,0,0,0,263,45,1,0,0,0,264,262,
-        1,0,0,0,265,266,5,27,0,0,266,267,3,44,22,0,267,268,5,28,0,0,268,
-        47,1,0,0,0,269,270,5,16,0,0,270,271,5,59,0,0,271,273,5,27,0,0,272,
-        274,3,50,25,0,273,272,1,0,0,0,273,274,1,0,0,0,274,275,1,0,0,0,275,
-        276,5,28,0,0,276,277,3,70,35,0,277,282,3,60,30,0,278,279,5,17,0,
-        0,279,280,3,50,25,0,280,281,3,70,35,0,281,283,1,0,0,0,282,278,1,
-        0,0,0,282,283,1,0,0,0,283,284,1,0,0,0,284,285,5,4,0,0,285,49,1,0,
-        0,0,286,290,5,59,0,0,287,290,3,20,10,0,288,290,3,14,7,0,289,286,
-        1,0,0,0,289,287,1,0,0,0,289,288,1,0,0,0,290,299,1,0,0,0,291,295,
-        5,31,0,0,292,296,5,59,0,0,293,296,3,20,10,0,294,296,3,14,7,0,295,
-        292,1,0,0,0,295,293,1,0,0,0,295,294,1,0,0,0,296,298,1,0,0,0,297,
-        291,1,0,0,0,298,301,1,0,0,0,299,297,1,0,0,0,299,300,1,0,0,0,300,
-        51,1,0,0,0,301,299,1,0,0,0,302,303,5,15,0,0,303,304,5,13,0,0,304,
-        305,3,70,35,0,305,306,3,54,27,0,306,307,5,4,0,0,307,53,1,0,0,0,308,
-        311,3,42,21,0,309,311,3,48,24,0,310,308,1,0,0,0,310,309,1,0,0,0,
-        311,312,1,0,0,0,312,313,3,70,35,0,313,315,1,0,0,0,314,310,1,0,0,
-        0,315,318,1,0,0,0,316,314,1,0,0,0,316,317,1,0,0,0,317,55,1,0,0,0,
-        318,316,1,0,0,0,319,320,5,59,0,0,320,322,5,27,0,0,321,323,3,50,25,
-        0,322,321,1,0,0,0,322,323,1,0,0,0,323,324,1,0,0,0,324,325,5,28,0,
-        0,325,57,1,0,0,0,326,327,7,7,0,0,327,59,1,0,0,0,328,329,3,6,3,0,
-        329,330,3,70,35,0,330,332,1,0,0,0,331,328,1,0,0,0,332,335,1,0,0,
-        0,333,331,1,0,0,0,333,334,1,0,0,0,334,61,1,0,0,0,335,333,1,0,0,0,
-        336,337,5,59,0,0,337,340,3,58,29,0,338,341,3,20,10,0,339,341,5,59,
-        0,0,340,338,1,0,0,0,340,339,1,0,0,0,341,63,1,0,0,0,342,343,5,59,
-        0,0,343,344,5,56,0,0,344,345,5,13,0,0,345,346,5,57,0,0,346,347,5,
-        14,0,0,347,65,1,0,0,0,348,349,5,59,0,0,349,350,5,57,0,0,350,351,
-        3,56,28,0,351,67,1,0,0,0,352,353,5,58,0,0,353,359,5,27,0,0,354,360,
-        5,59,0,0,355,360,3,20,10,0,356,360,3,18,9,0,357,360,3,56,28,0,358,
-        360,3,66,33,0,359,354,1,0,0,0,359,355,1,0,0,0,359,356,1,0,0,0,359,
-        357,1,0,0,0,359,358,1,0,0,0,360,361,1,0,0,0,361,362,5,28,0,0,362,
-        69,1,0,0,0,363,364,5,32,0,0,364,71,1,0,0,0,33,79,87,102,106,110,
-        115,124,129,133,147,151,159,171,205,215,230,234,238,247,252,258,
-        262,273,282,289,295,299,310,316,322,333,340,359
+        7,33,2,34,7,34,1,0,1,0,1,1,1,1,1,1,1,1,1,1,3,1,78,8,1,1,1,1,1,1,
+        1,1,1,5,1,84,8,1,10,1,12,1,87,9,1,1,2,1,2,1,3,1,3,1,3,1,3,1,3,1,
+        3,1,3,1,3,1,3,1,3,3,3,101,8,3,1,4,1,4,3,4,105,8,4,1,5,1,5,3,5,109,
+        8,5,1,6,1,6,1,6,3,6,114,8,6,1,7,1,7,1,8,1,8,1,8,3,8,121,8,8,1,8,
+        1,8,1,8,3,8,126,8,8,5,8,128,8,8,10,8,12,8,131,9,8,1,8,1,8,1,9,1,
+        9,1,10,1,10,1,10,1,10,1,10,5,10,142,8,10,10,10,12,10,145,9,10,1,
+        10,3,10,148,8,10,1,10,1,10,1,11,1,11,1,11,1,11,3,11,156,8,11,1,12,
+        1,12,1,12,1,12,1,12,1,13,1,13,1,13,1,13,1,13,3,13,168,8,13,1,13,
+        1,13,1,14,1,14,1,14,1,14,1,14,1,14,1,14,1,15,1,15,1,15,1,15,1,15,
+        1,15,1,15,1,15,1,16,1,16,1,16,1,16,1,16,1,16,1,16,1,17,1,17,1,18,
+        1,18,1,19,1,19,1,19,1,19,3,19,202,8,19,1,19,1,19,1,19,1,19,1,19,
+        1,19,1,19,1,19,3,19,212,8,19,1,19,1,19,1,19,1,19,1,19,1,19,1,19,
+        1,19,1,19,1,19,1,19,1,19,1,19,3,19,227,8,19,5,19,229,8,19,10,19,
+        12,19,232,9,19,1,20,1,20,1,20,1,20,1,20,1,20,1,20,3,20,241,8,20,
+        1,21,1,21,1,21,3,21,246,8,21,1,21,1,21,1,21,1,21,3,21,252,8,21,5,
+        21,254,8,21,10,21,12,21,257,9,21,1,22,1,22,1,22,1,22,1,23,1,23,1,
+        23,1,23,3,23,267,8,23,1,23,1,23,1,23,1,23,1,23,1,23,1,23,3,23,276,
+        8,23,1,23,1,23,1,24,1,24,1,24,3,24,283,8,24,1,24,1,24,1,24,1,24,
+        3,24,289,8,24,5,24,291,8,24,10,24,12,24,294,9,24,1,25,1,25,1,25,
+        1,25,1,25,1,25,1,26,1,26,3,26,304,8,26,1,26,1,26,5,26,308,8,26,10,
+        26,12,26,311,9,26,1,27,1,27,1,27,3,27,316,8,27,1,27,1,27,1,28,1,
+        28,1,29,1,29,1,29,5,29,325,8,29,10,29,12,29,328,9,29,1,30,1,30,1,
+        30,1,30,3,30,334,8,30,1,31,1,31,1,31,1,31,1,31,1,31,1,32,1,32,1,
+        32,1,32,1,33,1,33,1,33,1,33,1,33,1,33,1,33,3,33,353,8,33,1,33,1,
+        33,1,34,1,34,1,34,0,1,2,35,0,2,4,6,8,10,12,14,16,18,20,22,24,26,
+        28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58,60,62,64,66,68,0,
+        7,1,0,32,33,2,0,20,21,63,63,2,0,12,12,60,60,1,0,48,55,1,0,40,47,
+        1,0,18,19,1,0,34,39,376,0,70,1,0,0,0,2,77,1,0,0,0,4,88,1,0,0,0,6,
+        100,1,0,0,0,8,104,1,0,0,0,10,108,1,0,0,0,12,113,1,0,0,0,14,115,1,
+        0,0,0,16,117,1,0,0,0,18,134,1,0,0,0,20,136,1,0,0,0,22,151,1,0,0,
+        0,24,157,1,0,0,0,26,162,1,0,0,0,28,171,1,0,0,0,30,178,1,0,0,0,32,
+        186,1,0,0,0,34,193,1,0,0,0,36,195,1,0,0,0,38,211,1,0,0,0,40,233,
+        1,0,0,0,42,245,1,0,0,0,44,258,1,0,0,0,46,262,1,0,0,0,48,282,1,0,
+        0,0,50,295,1,0,0,0,52,309,1,0,0,0,54,312,1,0,0,0,56,319,1,0,0,0,
+        58,326,1,0,0,0,60,329,1,0,0,0,62,335,1,0,0,0,64,341,1,0,0,0,66,345,
+        1,0,0,0,68,356,1,0,0,0,70,71,3,2,1,0,71,1,1,0,0,0,72,73,6,1,-1,0,
+        73,74,3,6,3,0,74,75,3,4,2,0,75,78,1,0,0,0,76,78,3,4,2,0,77,72,1,
+        0,0,0,77,76,1,0,0,0,78,85,1,0,0,0,79,80,10,2,0,0,80,81,3,6,3,0,81,
+        82,3,4,2,0,82,84,1,0,0,0,83,79,1,0,0,0,84,87,1,0,0,0,85,83,1,0,0,
+        0,85,86,1,0,0,0,86,3,1,0,0,0,87,85,1,0,0,0,88,89,7,0,0,0,89,5,1,
+        0,0,0,90,101,3,8,4,0,91,101,3,10,5,0,92,101,3,12,6,0,93,101,3,40,
+        20,0,94,101,3,60,30,0,95,101,3,62,31,0,96,101,3,64,32,0,97,101,5,
+        61,0,0,98,101,3,66,33,0,99,101,3,50,25,0,100,90,1,0,0,0,100,91,1,
+        0,0,0,100,92,1,0,0,0,100,93,1,0,0,0,100,94,1,0,0,0,100,95,1,0,0,
+        0,100,96,1,0,0,0,100,97,1,0,0,0,100,98,1,0,0,0,100,99,1,0,0,0,101,
+        7,1,0,0,0,102,105,3,46,23,0,103,105,3,54,27,0,104,102,1,0,0,0,104,
+        103,1,0,0,0,105,9,1,0,0,0,106,109,3,20,10,0,107,109,3,26,13,0,108,
+        106,1,0,0,0,108,107,1,0,0,0,109,11,1,0,0,0,110,114,3,28,14,0,111,
+        114,3,30,15,0,112,114,3,32,16,0,113,110,1,0,0,0,113,111,1,0,0,0,
+        113,112,1,0,0,0,114,13,1,0,0,0,115,116,7,1,0,0,116,15,1,0,0,0,117,
+        120,5,29,0,0,118,121,3,18,9,0,119,121,3,14,7,0,120,118,1,0,0,0,120,
+        119,1,0,0,0,121,129,1,0,0,0,122,125,5,31,0,0,123,126,3,18,9,0,124,
+        126,3,14,7,0,125,123,1,0,0,0,125,124,1,0,0,0,126,128,1,0,0,0,127,
+        122,1,0,0,0,128,131,1,0,0,0,129,127,1,0,0,0,129,130,1,0,0,0,130,
+        132,1,0,0,0,131,129,1,0,0,0,132,133,5,30,0,0,133,17,1,0,0,0,134,
+        135,7,2,0,0,135,19,1,0,0,0,136,137,5,1,0,0,137,138,3,38,19,0,138,
+        139,3,68,34,0,139,143,3,58,29,0,140,142,3,24,12,0,141,140,1,0,0,
+        0,142,145,1,0,0,0,143,141,1,0,0,0,143,144,1,0,0,0,144,147,1,0,0,
+        0,145,143,1,0,0,0,146,148,3,22,11,0,147,146,1,0,0,0,147,148,1,0,
+        0,0,148,149,1,0,0,0,149,150,5,4,0,0,150,21,1,0,0,0,151,152,5,3,0,
+        0,152,155,3,68,34,0,153,156,3,58,29,0,154,156,5,64,0,0,155,153,1,
+        0,0,0,155,154,1,0,0,0,156,23,1,0,0,0,157,158,5,2,0,0,158,159,3,38,
+        19,0,159,160,3,68,34,0,160,161,3,58,29,0,161,25,1,0,0,0,162,163,
+        5,5,0,0,163,164,3,38,19,0,164,165,3,68,34,0,165,167,3,58,29,0,166,
+        168,3,22,11,0,167,166,1,0,0,0,167,168,1,0,0,0,168,169,1,0,0,0,169,
+        170,5,4,0,0,170,27,1,0,0,0,171,172,5,7,0,0,172,173,3,38,19,0,173,
+        174,5,6,0,0,174,175,3,68,34,0,175,176,3,58,29,0,176,177,5,4,0,0,
+        177,29,1,0,0,0,178,179,5,10,0,0,179,180,5,59,0,0,180,181,5,11,0,
+        0,181,182,5,59,0,0,182,183,3,68,34,0,183,184,3,58,29,0,184,185,5,
+        4,0,0,185,31,1,0,0,0,186,187,5,9,0,0,187,188,3,38,19,0,188,189,5,
+        6,0,0,189,190,3,68,34,0,190,191,3,58,29,0,191,192,5,4,0,0,192,33,
+        1,0,0,0,193,194,7,3,0,0,194,35,1,0,0,0,195,196,7,4,0,0,196,37,1,
+        0,0,0,197,198,5,59,0,0,198,201,3,34,17,0,199,202,3,18,9,0,200,202,
+        3,14,7,0,201,199,1,0,0,0,201,200,1,0,0,0,202,212,1,0,0,0,203,204,
+        3,18,9,0,204,205,3,34,17,0,205,206,3,18,9,0,206,212,1,0,0,0,207,
+        208,5,59,0,0,208,209,3,34,17,0,209,210,5,59,0,0,210,212,1,0,0,0,
+        211,197,1,0,0,0,211,203,1,0,0,0,211,207,1,0,0,0,212,230,1,0,0,0,
+        213,226,7,5,0,0,214,215,5,59,0,0,215,216,3,34,17,0,216,217,3,18,
+        9,0,217,227,1,0,0,0,218,219,3,18,9,0,219,220,3,34,17,0,220,221,3,
+        18,9,0,221,227,1,0,0,0,222,223,5,59,0,0,223,224,3,34,17,0,224,225,
+        5,59,0,0,225,227,1,0,0,0,226,214,1,0,0,0,226,218,1,0,0,0,226,222,
+        1,0,0,0,227,229,1,0,0,0,228,213,1,0,0,0,229,232,1,0,0,0,230,228,
+        1,0,0,0,230,231,1,0,0,0,231,39,1,0,0,0,232,230,1,0,0,0,233,234,5,
+        59,0,0,234,240,5,56,0,0,235,241,3,18,9,0,236,241,5,59,0,0,237,241,
+        3,16,8,0,238,241,3,42,21,0,239,241,3,14,7,0,240,235,1,0,0,0,240,
+        236,1,0,0,0,240,237,1,0,0,0,240,238,1,0,0,0,240,239,1,0,0,0,241,
+        41,1,0,0,0,242,246,5,59,0,0,243,246,3,18,9,0,244,246,3,44,22,0,245,
+        242,1,0,0,0,245,243,1,0,0,0,245,244,1,0,0,0,246,255,1,0,0,0,247,
+        251,3,36,18,0,248,252,5,59,0,0,249,252,3,18,9,0,250,252,3,44,22,
+        0,251,248,1,0,0,0,251,249,1,0,0,0,251,250,1,0,0,0,252,254,1,0,0,
+        0,253,247,1,0,0,0,254,257,1,0,0,0,255,253,1,0,0,0,255,256,1,0,0,
+        0,256,43,1,0,0,0,257,255,1,0,0,0,258,259,5,27,0,0,259,260,3,42,21,
+        0,260,261,5,28,0,0,261,45,1,0,0,0,262,263,5,16,0,0,263,264,5,59,
+        0,0,264,266,5,27,0,0,265,267,3,48,24,0,266,265,1,0,0,0,266,267,1,
+        0,0,0,267,268,1,0,0,0,268,269,5,28,0,0,269,270,3,68,34,0,270,275,
+        3,58,29,0,271,272,5,17,0,0,272,273,3,48,24,0,273,274,3,68,34,0,274,
+        276,1,0,0,0,275,271,1,0,0,0,275,276,1,0,0,0,276,277,1,0,0,0,277,
+        278,5,4,0,0,278,47,1,0,0,0,279,283,5,59,0,0,280,283,3,18,9,0,281,
+        283,3,14,7,0,282,279,1,0,0,0,282,280,1,0,0,0,282,281,1,0,0,0,283,
+        292,1,0,0,0,284,288,5,31,0,0,285,289,5,59,0,0,286,289,3,18,9,0,287,
+        289,3,14,7,0,288,285,1,0,0,0,288,286,1,0,0,0,288,287,1,0,0,0,289,
+        291,1,0,0,0,290,284,1,0,0,0,291,294,1,0,0,0,292,290,1,0,0,0,292,
+        293,1,0,0,0,293,49,1,0,0,0,294,292,1,0,0,0,295,296,5,15,0,0,296,
+        297,5,13,0,0,297,298,3,68,34,0,298,299,3,52,26,0,299,300,5,4,0,0,
+        300,51,1,0,0,0,301,304,3,40,20,0,302,304,3,46,23,0,303,301,1,0,0,
+        0,303,302,1,0,0,0,304,305,1,0,0,0,305,306,3,68,34,0,306,308,1,0,
+        0,0,307,303,1,0,0,0,308,311,1,0,0,0,309,307,1,0,0,0,309,310,1,0,
+        0,0,310,53,1,0,0,0,311,309,1,0,0,0,312,313,5,59,0,0,313,315,5,27,
+        0,0,314,316,3,48,24,0,315,314,1,0,0,0,315,316,1,0,0,0,316,317,1,
+        0,0,0,317,318,5,28,0,0,318,55,1,0,0,0,319,320,7,6,0,0,320,57,1,0,
+        0,0,321,322,3,6,3,0,322,323,3,68,34,0,323,325,1,0,0,0,324,321,1,
+        0,0,0,325,328,1,0,0,0,326,324,1,0,0,0,326,327,1,0,0,0,327,59,1,0,
+        0,0,328,326,1,0,0,0,329,330,5,59,0,0,330,333,3,56,28,0,331,334,3,
+        18,9,0,332,334,5,59,0,0,333,331,1,0,0,0,333,332,1,0,0,0,334,61,1,
+        0,0,0,335,336,5,59,0,0,336,337,5,56,0,0,337,338,5,13,0,0,338,339,
+        5,57,0,0,339,340,5,14,0,0,340,63,1,0,0,0,341,342,5,59,0,0,342,343,
+        5,57,0,0,343,344,3,54,27,0,344,65,1,0,0,0,345,346,5,58,0,0,346,352,
+        5,27,0,0,347,353,5,59,0,0,348,353,3,18,9,0,349,353,3,16,8,0,350,
+        353,3,54,27,0,351,353,3,64,32,0,352,347,1,0,0,0,352,348,1,0,0,0,
+        352,349,1,0,0,0,352,350,1,0,0,0,352,351,1,0,0,0,353,354,1,0,0,0,
+        354,355,5,28,0,0,355,67,1,0,0,0,356,357,5,32,0,0,357,69,1,0,0,0,
+        32,77,85,100,104,108,113,120,125,129,143,147,155,167,201,211,226,
+        230,240,245,251,255,266,275,282,288,292,303,309,315,326,333,352
     ]
 
 class RubyParser ( Parser ):
@@ -186,44 +183,43 @@ class RubyParser ( Parser ):
     RULE_instructions = 5
     RULE_loop = 6
     RULE_bool = 7
-    RULE_type = 8
-    RULE_array = 9
-    RULE_value = 10
-    RULE_ifInstruction = 11
-    RULE_elseInstruction = 12
-    RULE_elsifInstruction = 13
-    RULE_unlessInstruction = 14
-    RULE_whileLoop = 15
-    RULE_forLoop = 16
-    RULE_untilLoop = 17
-    RULE_comparisonOperator = 18
-    RULE_operator = 19
-    RULE_condition = 20
-    RULE_variables = 21
-    RULE_mathOperation = 22
-    RULE_bracketExpression = 23
-    RULE_function = 24
-    RULE_parameters = 25
-    RULE_class = 26
-    RULE_classBody = 27
-    RULE_functionCall = 28
-    RULE_assignmentOperator = 29
-    RULE_loopBody = 30
-    RULE_assignment = 31
-    RULE_classObject = 32
-    RULE_methodCall = 33
-    RULE_putsFunction = 34
-    RULE_crlf = 35
+    RULE_array = 8
+    RULE_value = 9
+    RULE_ifInstruction = 10
+    RULE_elseInstruction = 11
+    RULE_elsifInstruction = 12
+    RULE_unlessInstruction = 13
+    RULE_whileLoop = 14
+    RULE_forLoop = 15
+    RULE_untilLoop = 16
+    RULE_comparisonOperator = 17
+    RULE_operator = 18
+    RULE_condition = 19
+    RULE_variables = 20
+    RULE_mathOperation = 21
+    RULE_bracketExpression = 22
+    RULE_function = 23
+    RULE_parameters = 24
+    RULE_class = 25
+    RULE_classBody = 26
+    RULE_functionCall = 27
+    RULE_assignmentOperator = 28
+    RULE_loopBody = 29
+    RULE_assignment = 30
+    RULE_classObject = 31
+    RULE_methodCall = 32
+    RULE_putsFunction = 33
+    RULE_crlf = 34
 
     ruleNames =  [ "program", "statementList", "terminator", "statement", 
-                   "functions", "instructions", "loop", "bool", "type", 
-                   "array", "value", "ifInstruction", "elseInstruction", 
-                   "elsifInstruction", "unlessInstruction", "whileLoop", 
-                   "forLoop", "untilLoop", "comparisonOperator", "operator", 
-                   "condition", "variables", "mathOperation", "bracketExpression", 
-                   "function", "parameters", "class", "classBody", "functionCall", 
-                   "assignmentOperator", "loopBody", "assignment", "classObject", 
-                   "methodCall", "putsFunction", "crlf" ]
+                   "functions", "instructions", "loop", "bool", "array", 
+                   "value", "ifInstruction", "elseInstruction", "elsifInstruction", 
+                   "unlessInstruction", "whileLoop", "forLoop", "untilLoop", 
+                   "comparisonOperator", "operator", "condition", "variables", 
+                   "mathOperation", "bracketExpression", "function", "parameters", 
+                   "class", "classBody", "functionCall", "assignmentOperator", 
+                   "loopBody", "assignment", "classObject", "methodCall", 
+                   "putsFunction", "crlf" ]
 
     EOF = Token.EOF
     IF=1
@@ -337,7 +333,7 @@ class RubyParser ( Parser ):
         self.enterRule(localctx, 0, self.RULE_program)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 72
+            self.state = 70
             self.statementList(0)
         except RecognitionException as re:
             localctx.exception = re
@@ -395,24 +391,24 @@ class RubyParser ( Parser ):
         self.enterRecursionRule(localctx, 2, self.RULE_statementList, _p)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 79
+            self.state = 77
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [1, 5, 7, 9, 10, 15, 16, 22, 23, 24, 58, 59, 61]:
-                self.state = 75
+            if token in [1, 5, 7, 9, 10, 15, 16, 58, 59, 61]:
+                self.state = 73
                 self.statement()
-                self.state = 76
+                self.state = 74
                 self.terminator()
                 pass
             elif token in [32, 33]:
-                self.state = 78
+                self.state = 76
                 self.terminator()
                 pass
             else:
                 raise NoViableAltException(self)
 
             self._ctx.stop = self._input.LT(-1)
-            self.state = 87
+            self.state = 85
             self._errHandler.sync(self)
             _alt = self._interp.adaptivePredict(self._input,1,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
@@ -422,15 +418,15 @@ class RubyParser ( Parser ):
                     _prevctx = localctx
                     localctx = RubyParser.StatementListContext(self, _parentctx, _parentState)
                     self.pushNewRecursionContext(localctx, _startState, self.RULE_statementList)
-                    self.state = 81
+                    self.state = 79
                     if not self.precpred(self._ctx, 2):
                         from antlr4.error.Errors import FailedPredicateException
                         raise FailedPredicateException(self, "self.precpred(self._ctx, 2)")
-                    self.state = 82
+                    self.state = 80
                     self.statement()
-                    self.state = 83
+                    self.state = 81
                     self.terminator() 
-                self.state = 89
+                self.state = 87
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,1,self._ctx)
 
@@ -483,7 +479,7 @@ class RubyParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 90
+            self.state = 88
             _la = self._input.LA(1)
             if not(_la==32 or _la==33):
                 self._errHandler.recoverInline(self)
@@ -570,66 +566,66 @@ class RubyParser ( Parser ):
         localctx = RubyParser.StatementContext(self, self._ctx, self.state)
         self.enterRule(localctx, 6, self.RULE_statement)
         try:
-            self.state = 102
+            self.state = 100
             self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,2,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 92
+                self.state = 90
                 self.functions()
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 93
+                self.state = 91
                 self.instructions()
                 pass
 
             elif la_ == 3:
                 self.enterOuterAlt(localctx, 3)
-                self.state = 94
+                self.state = 92
                 self.loop()
                 pass
 
             elif la_ == 4:
                 self.enterOuterAlt(localctx, 4)
-                self.state = 95
+                self.state = 93
                 self.variables()
                 pass
 
             elif la_ == 5:
                 self.enterOuterAlt(localctx, 5)
-                self.state = 96
+                self.state = 94
                 self.assignment()
                 pass
 
             elif la_ == 6:
                 self.enterOuterAlt(localctx, 6)
-                self.state = 97
+                self.state = 95
                 self.classObject()
                 pass
 
             elif la_ == 7:
                 self.enterOuterAlt(localctx, 7)
-                self.state = 98
+                self.state = 96
                 self.methodCall()
                 pass
 
             elif la_ == 8:
                 self.enterOuterAlt(localctx, 8)
-                self.state = 99
+                self.state = 97
                 self.match(RubyParser.COMMENT)
                 pass
 
             elif la_ == 9:
                 self.enterOuterAlt(localctx, 9)
-                self.state = 100
+                self.state = 98
                 self.putsFunction()
                 pass
 
             elif la_ == 10:
                 self.enterOuterAlt(localctx, 10)
-                self.state = 101
+                self.state = 99
                 self.class_()
                 pass
 
@@ -683,17 +679,17 @@ class RubyParser ( Parser ):
         localctx = RubyParser.FunctionsContext(self, self._ctx, self.state)
         self.enterRule(localctx, 8, self.RULE_functions)
         try:
-            self.state = 106
+            self.state = 104
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [16]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 104
+                self.state = 102
                 self.function()
                 pass
             elif token in [59]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 105
+                self.state = 103
                 self.functionCall()
                 pass
             else:
@@ -748,17 +744,17 @@ class RubyParser ( Parser ):
         localctx = RubyParser.InstructionsContext(self, self._ctx, self.state)
         self.enterRule(localctx, 10, self.RULE_instructions)
         try:
-            self.state = 110
+            self.state = 108
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [1]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 108
+                self.state = 106
                 self.ifInstruction()
                 pass
             elif token in [5]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 109
+                self.state = 107
                 self.unlessInstruction()
                 pass
             else:
@@ -817,22 +813,22 @@ class RubyParser ( Parser ):
         localctx = RubyParser.LoopContext(self, self._ctx, self.state)
         self.enterRule(localctx, 12, self.RULE_loop)
         try:
-            self.state = 115
+            self.state = 113
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [7]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 112
+                self.state = 110
                 self.whileLoop()
                 pass
             elif token in [10]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 113
+                self.state = 111
                 self.forLoop()
                 pass
             elif token in [9]:
                 self.enterOuterAlt(localctx, 3)
-                self.state = 114
+                self.state = 112
                 self.untilLoop()
                 pass
             else:
@@ -859,6 +855,9 @@ class RubyParser ( Parser ):
 
         def FALSE(self):
             return self.getToken(RubyParser.FALSE, 0)
+
+        def NIL(self):
+            return self.getToken(RubyParser.NIL, 0)
 
         def getRuleIndex(self):
             return RubyParser.RULE_bool
@@ -887,68 +886,9 @@ class RubyParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 117
+            self.state = 115
             _la = self._input.LA(1)
-            if not(_la==20 or _la==21):
-                self._errHandler.recoverInline(self)
-            else:
-                self._errHandler.reportMatch(self)
-                self.consume()
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-
-    class TypeContext(ParserRuleContext):
-        __slots__ = 'parser'
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def AT(self):
-            return self.getToken(RubyParser.AT, 0)
-
-        def ATAT(self):
-            return self.getToken(RubyParser.ATAT, 0)
-
-        def DOLLAR(self):
-            return self.getToken(RubyParser.DOLLAR, 0)
-
-        def getRuleIndex(self):
-            return RubyParser.RULE_type
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterType" ):
-                listener.enterType(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitType" ):
-                listener.exitType(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitType" ):
-                return visitor.visitType(self)
-            else:
-                return visitor.visitChildren(self)
-
-
-
-
-    def type_(self):
-
-        localctx = RubyParser.TypeContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 16, self.RULE_type)
-        self._la = 0 # Token type
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 119
-            _la = self._input.LA(1)
-            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 29360128) != 0)):
+            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & -9223372036851630080) != 0)):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -1018,51 +958,51 @@ class RubyParser ( Parser ):
     def array(self):
 
         localctx = RubyParser.ArrayContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 18, self.RULE_array)
+        self.enterRule(localctx, 16, self.RULE_array)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 121
+            self.state = 117
             self.match(RubyParser.LEFTBRACKET)
-            self.state = 124
+            self.state = 120
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [12, 60]:
-                self.state = 122
+                self.state = 118
                 self.value()
                 pass
-            elif token in [20, 21]:
-                self.state = 123
+            elif token in [20, 21, 63]:
+                self.state = 119
                 self.bool_()
                 pass
             else:
                 raise NoViableAltException(self)
 
-            self.state = 133
+            self.state = 129
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while _la==31:
-                self.state = 126
+                self.state = 122
                 self.match(RubyParser.COMMA)
-                self.state = 129
+                self.state = 125
                 self._errHandler.sync(self)
                 token = self._input.LA(1)
                 if token in [12, 60]:
-                    self.state = 127
+                    self.state = 123
                     self.value()
                     pass
-                elif token in [20, 21]:
-                    self.state = 128
+                elif token in [20, 21, 63]:
+                    self.state = 124
                     self.bool_()
                     pass
                 else:
                     raise NoViableAltException(self)
 
-                self.state = 135
+                self.state = 131
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
-            self.state = 136
+            self.state = 132
             self.match(RubyParser.RIGTHBRACKET)
         except RecognitionException as re:
             localctx.exception = re
@@ -1109,11 +1049,11 @@ class RubyParser ( Parser ):
     def value(self):
 
         localctx = RubyParser.ValueContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 20, self.RULE_value)
+        self.enterRule(localctx, 18, self.RULE_value)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 138
+            self.state = 134
             _la = self._input.LA(1)
             if not(_la==12 or _la==60):
                 self._errHandler.recoverInline(self)
@@ -1188,37 +1128,37 @@ class RubyParser ( Parser ):
     def ifInstruction(self):
 
         localctx = RubyParser.IfInstructionContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 22, self.RULE_ifInstruction)
+        self.enterRule(localctx, 20, self.RULE_ifInstruction)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 140
+            self.state = 136
             self.match(RubyParser.IF)
-            self.state = 141
+            self.state = 137
             self.condition()
-            self.state = 142
+            self.state = 138
             self.crlf()
-            self.state = 143
+            self.state = 139
             self.loopBody()
-            self.state = 147
+            self.state = 143
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while _la==2:
-                self.state = 144
+                self.state = 140
                 self.elsifInstruction()
-                self.state = 149
+                self.state = 145
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
-            self.state = 151
+            self.state = 147
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==3:
-                self.state = 150
+                self.state = 146
                 self.elseInstruction()
 
 
-            self.state = 153
+            self.state = 149
             self.match(RubyParser.END)
         except RecognitionException as re:
             localctx.exception = re
@@ -1273,22 +1213,22 @@ class RubyParser ( Parser ):
     def elseInstruction(self):
 
         localctx = RubyParser.ElseInstructionContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 24, self.RULE_elseInstruction)
+        self.enterRule(localctx, 22, self.RULE_elseInstruction)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 155
+            self.state = 151
             self.match(RubyParser.ELSE)
-            self.state = 156
+            self.state = 152
             self.crlf()
-            self.state = 159
+            self.state = 155
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [1, 4, 5, 7, 9, 10, 15, 16, 22, 23, 24, 58, 59, 61]:
-                self.state = 157
+            if token in [1, 4, 5, 7, 9, 10, 15, 16, 58, 59, 61]:
+                self.state = 153
                 self.loopBody()
                 pass
             elif token in [64]:
-                self.state = 158
+                self.state = 154
                 self.match(RubyParser.NEXT)
                 pass
             else:
@@ -1348,16 +1288,16 @@ class RubyParser ( Parser ):
     def elsifInstruction(self):
 
         localctx = RubyParser.ElsifInstructionContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 26, self.RULE_elsifInstruction)
+        self.enterRule(localctx, 24, self.RULE_elsifInstruction)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 161
+            self.state = 157
             self.match(RubyParser.ELSIF)
-            self.state = 162
+            self.state = 158
             self.condition()
-            self.state = 163
+            self.state = 159
             self.crlf()
-            self.state = 164
+            self.state = 160
             self.loopBody()
         except RecognitionException as re:
             localctx.exception = re
@@ -1420,27 +1360,27 @@ class RubyParser ( Parser ):
     def unlessInstruction(self):
 
         localctx = RubyParser.UnlessInstructionContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 28, self.RULE_unlessInstruction)
+        self.enterRule(localctx, 26, self.RULE_unlessInstruction)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 166
+            self.state = 162
             self.match(RubyParser.UNLESS)
-            self.state = 167
+            self.state = 163
             self.condition()
-            self.state = 168
+            self.state = 164
             self.crlf()
-            self.state = 169
+            self.state = 165
             self.loopBody()
-            self.state = 171
+            self.state = 167
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==3:
-                self.state = 170
+                self.state = 166
                 self.elseInstruction()
 
 
-            self.state = 173
+            self.state = 169
             self.match(RubyParser.END)
         except RecognitionException as re:
             localctx.exception = re
@@ -1502,20 +1442,20 @@ class RubyParser ( Parser ):
     def whileLoop(self):
 
         localctx = RubyParser.WhileLoopContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 30, self.RULE_whileLoop)
+        self.enterRule(localctx, 28, self.RULE_whileLoop)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 175
+            self.state = 171
             self.match(RubyParser.WHILE)
-            self.state = 176
+            self.state = 172
             self.condition()
-            self.state = 177
+            self.state = 173
             self.match(RubyParser.DO)
-            self.state = 178
+            self.state = 174
             self.crlf()
-            self.state = 179
+            self.state = 175
             self.loopBody()
-            self.state = 180
+            self.state = 176
             self.match(RubyParser.END)
         except RecognitionException as re:
             localctx.exception = re
@@ -1579,22 +1519,22 @@ class RubyParser ( Parser ):
     def forLoop(self):
 
         localctx = RubyParser.ForLoopContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 32, self.RULE_forLoop)
+        self.enterRule(localctx, 30, self.RULE_forLoop)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 182
+            self.state = 178
             self.match(RubyParser.FOR)
-            self.state = 183
+            self.state = 179
             self.match(RubyParser.ID)
-            self.state = 184
+            self.state = 180
             self.match(RubyParser.IN)
-            self.state = 185
+            self.state = 181
             self.match(RubyParser.ID)
-            self.state = 186
+            self.state = 182
             self.crlf()
-            self.state = 187
+            self.state = 183
             self.loopBody()
-            self.state = 188
+            self.state = 184
             self.match(RubyParser.END)
         except RecognitionException as re:
             localctx.exception = re
@@ -1656,20 +1596,20 @@ class RubyParser ( Parser ):
     def untilLoop(self):
 
         localctx = RubyParser.UntilLoopContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 34, self.RULE_untilLoop)
+        self.enterRule(localctx, 32, self.RULE_untilLoop)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 190
+            self.state = 186
             self.match(RubyParser.UNTIL)
-            self.state = 191
+            self.state = 187
             self.condition()
-            self.state = 192
+            self.state = 188
             self.match(RubyParser.DO)
-            self.state = 193
+            self.state = 189
             self.crlf()
-            self.state = 194
+            self.state = 190
             self.loopBody()
-            self.state = 195
+            self.state = 191
             self.match(RubyParser.END)
         except RecognitionException as re:
             localctx.exception = re
@@ -1734,11 +1674,11 @@ class RubyParser ( Parser ):
     def comparisonOperator(self):
 
         localctx = RubyParser.ComparisonOperatorContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 36, self.RULE_comparisonOperator)
+        self.enterRule(localctx, 34, self.RULE_comparisonOperator)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 197
+            self.state = 193
             _la = self._input.LA(1)
             if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 71776119061217280) != 0)):
                 self._errHandler.recoverInline(self)
@@ -1808,11 +1748,11 @@ class RubyParser ( Parser ):
     def operator(self):
 
         localctx = RubyParser.OperatorContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 38, self.RULE_operator)
+        self.enterRule(localctx, 36, self.RULE_operator)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 199
+            self.state = 195
             _la = self._input.LA(1)
             if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 280375465082880) != 0)):
                 self._errHandler.recoverInline(self)
@@ -1894,27 +1834,27 @@ class RubyParser ( Parser ):
     def condition(self):
 
         localctx = RubyParser.ConditionContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 40, self.RULE_condition)
+        self.enterRule(localctx, 38, self.RULE_condition)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 215
+            self.state = 211
             self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,14,self._ctx)
             if la_ == 1:
-                self.state = 201
+                self.state = 197
                 self.match(RubyParser.ID)
-                self.state = 202
+                self.state = 198
                 self.comparisonOperator()
-                self.state = 205
+                self.state = 201
                 self._errHandler.sync(self)
                 token = self._input.LA(1)
                 if token in [12, 60]:
-                    self.state = 203
+                    self.state = 199
                     self.value()
                     pass
-                elif token in [20, 21]:
-                    self.state = 204
+                elif token in [20, 21, 63]:
+                    self.state = 200
                     self.bool_()
                     pass
                 else:
@@ -1923,67 +1863,67 @@ class RubyParser ( Parser ):
                 pass
 
             elif la_ == 2:
-                self.state = 207
+                self.state = 203
                 self.value()
-                self.state = 208
+                self.state = 204
                 self.comparisonOperator()
-                self.state = 209
+                self.state = 205
                 self.value()
                 pass
 
             elif la_ == 3:
-                self.state = 211
+                self.state = 207
                 self.match(RubyParser.ID)
-                self.state = 212
+                self.state = 208
                 self.comparisonOperator()
-                self.state = 213
+                self.state = 209
                 self.match(RubyParser.ID)
                 pass
 
 
-            self.state = 234
+            self.state = 230
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while _la==18 or _la==19:
-                self.state = 217
+                self.state = 213
                 _la = self._input.LA(1)
                 if not(_la==18 or _la==19):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
                     self.consume()
-                self.state = 230
+                self.state = 226
                 self._errHandler.sync(self)
                 la_ = self._interp.adaptivePredict(self._input,15,self._ctx)
                 if la_ == 1:
-                    self.state = 218
+                    self.state = 214
                     self.match(RubyParser.ID)
+                    self.state = 215
+                    self.comparisonOperator()
+                    self.state = 216
+                    self.value()
+                    pass
+
+                elif la_ == 2:
+                    self.state = 218
+                    self.value()
                     self.state = 219
                     self.comparisonOperator()
                     self.state = 220
                     self.value()
                     pass
 
-                elif la_ == 2:
+                elif la_ == 3:
                     self.state = 222
-                    self.value()
+                    self.match(RubyParser.ID)
                     self.state = 223
                     self.comparisonOperator()
                     self.state = 224
-                    self.value()
-                    pass
-
-                elif la_ == 3:
-                    self.state = 226
-                    self.match(RubyParser.ID)
-                    self.state = 227
-                    self.comparisonOperator()
-                    self.state = 228
                     self.match(RubyParser.ID)
                     pass
 
 
-                self.state = 236
+                self.state = 232
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
@@ -2028,10 +1968,6 @@ class RubyParser ( Parser ):
             return self.getTypedRuleContext(RubyParser.BoolContext,0)
 
 
-        def type_(self):
-            return self.getTypedRuleContext(RubyParser.TypeContext,0)
-
-
         def getRuleIndex(self):
             return RubyParser.RULE_variables
 
@@ -2055,47 +1991,38 @@ class RubyParser ( Parser ):
     def variables(self):
 
         localctx = RubyParser.VariablesContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 42, self.RULE_variables)
-        self._la = 0 # Token type
+        self.enterRule(localctx, 40, self.RULE_variables)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 238
-            self._errHandler.sync(self)
-            _la = self._input.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & 29360128) != 0):
-                self.state = 237
-                self.type_()
-
-
-            self.state = 240
+            self.state = 233
             self.match(RubyParser.ID)
-            self.state = 241
+            self.state = 234
             self.match(RubyParser.EQUAL)
-            self.state = 247
+            self.state = 240
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,18,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,17,self._ctx)
             if la_ == 1:
-                self.state = 242
+                self.state = 235
                 self.value()
                 pass
 
             elif la_ == 2:
-                self.state = 243
+                self.state = 236
                 self.match(RubyParser.ID)
                 pass
 
             elif la_ == 3:
-                self.state = 244
+                self.state = 237
                 self.array()
                 pass
 
             elif la_ == 4:
-                self.state = 245
+                self.state = 238
                 self.mathOperation()
                 pass
 
             elif la_ == 5:
-                self.state = 246
+                self.state = 239
                 self.bool_()
                 pass
 
@@ -2166,53 +2093,53 @@ class RubyParser ( Parser ):
     def mathOperation(self):
 
         localctx = RubyParser.MathOperationContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 44, self.RULE_mathOperation)
+        self.enterRule(localctx, 42, self.RULE_mathOperation)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 252
+            self.state = 245
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [59]:
-                self.state = 249
+                self.state = 242
                 self.match(RubyParser.ID)
                 pass
             elif token in [12, 60]:
-                self.state = 250
+                self.state = 243
                 self.value()
                 pass
             elif token in [27]:
-                self.state = 251
+                self.state = 244
                 self.bracketExpression()
                 pass
             else:
                 raise NoViableAltException(self)
 
-            self.state = 262
+            self.state = 255
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while (((_la) & ~0x3f) == 0 and ((1 << _la) & 280375465082880) != 0):
-                self.state = 254
+                self.state = 247
                 self.operator()
-                self.state = 258
+                self.state = 251
                 self._errHandler.sync(self)
                 token = self._input.LA(1)
                 if token in [59]:
-                    self.state = 255
+                    self.state = 248
                     self.match(RubyParser.ID)
                     pass
                 elif token in [12, 60]:
-                    self.state = 256
+                    self.state = 249
                     self.value()
                     pass
                 elif token in [27]:
-                    self.state = 257
+                    self.state = 250
                     self.bracketExpression()
                     pass
                 else:
                     raise NoViableAltException(self)
 
-                self.state = 264
+                self.state = 257
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
@@ -2265,14 +2192,14 @@ class RubyParser ( Parser ):
     def bracketExpression(self):
 
         localctx = RubyParser.BracketExpressionContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 46, self.RULE_bracketExpression)
+        self.enterRule(localctx, 44, self.RULE_bracketExpression)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 265
+            self.state = 258
             self.match(RubyParser.LEFTPAREN)
-            self.state = 266
+            self.state = 259
             self.mathOperation()
-            self.state = 267
+            self.state = 260
             self.match(RubyParser.RIGHTPAREN)
         except RecognitionException as re:
             localctx.exception = re
@@ -2349,43 +2276,43 @@ class RubyParser ( Parser ):
     def function(self):
 
         localctx = RubyParser.FunctionContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 48, self.RULE_function)
+        self.enterRule(localctx, 46, self.RULE_function)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 269
+            self.state = 262
             self.match(RubyParser.DEF)
-            self.state = 270
+            self.state = 263
             self.match(RubyParser.ID)
-            self.state = 271
+            self.state = 264
             self.match(RubyParser.LEFTPAREN)
-            self.state = 273
+            self.state = 266
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & 1729382256913420288) != 0):
-                self.state = 272
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & -7493989779941355520) != 0):
+                self.state = 265
                 self.parameters()
 
 
-            self.state = 275
+            self.state = 268
             self.match(RubyParser.RIGHTPAREN)
-            self.state = 276
+            self.state = 269
             self.crlf()
-            self.state = 277
+            self.state = 270
             self.loopBody()
-            self.state = 282
+            self.state = 275
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==17:
-                self.state = 278
+                self.state = 271
                 self.match(RubyParser.RETURN)
-                self.state = 279
+                self.state = 272
                 self.parameters()
-                self.state = 280
+                self.state = 273
                 self.crlf()
 
 
-            self.state = 284
+            self.state = 277
             self.match(RubyParser.END)
         except RecognitionException as re:
             localctx.exception = re
@@ -2452,53 +2379,53 @@ class RubyParser ( Parser ):
     def parameters(self):
 
         localctx = RubyParser.ParametersContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 50, self.RULE_parameters)
+        self.enterRule(localctx, 48, self.RULE_parameters)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 289
+            self.state = 282
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [59]:
-                self.state = 286
+                self.state = 279
                 self.match(RubyParser.ID)
                 pass
             elif token in [12, 60]:
-                self.state = 287
+                self.state = 280
                 self.value()
                 pass
-            elif token in [20, 21]:
-                self.state = 288
+            elif token in [20, 21, 63]:
+                self.state = 281
                 self.bool_()
                 pass
             else:
                 raise NoViableAltException(self)
 
-            self.state = 299
+            self.state = 292
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while _la==31:
-                self.state = 291
+                self.state = 284
                 self.match(RubyParser.COMMA)
-                self.state = 295
+                self.state = 288
                 self._errHandler.sync(self)
                 token = self._input.LA(1)
                 if token in [59]:
-                    self.state = 292
+                    self.state = 285
                     self.match(RubyParser.ID)
                     pass
                 elif token in [12, 60]:
-                    self.state = 293
+                    self.state = 286
                     self.value()
                     pass
-                elif token in [20, 21]:
-                    self.state = 294
+                elif token in [20, 21, 63]:
+                    self.state = 287
                     self.bool_()
                     pass
                 else:
                     raise NoViableAltException(self)
 
-                self.state = 301
+                self.state = 294
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
@@ -2558,18 +2485,18 @@ class RubyParser ( Parser ):
     def class_(self):
 
         localctx = RubyParser.ClassContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 52, self.RULE_class)
+        self.enterRule(localctx, 50, self.RULE_class)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 302
+            self.state = 295
             self.match(RubyParser.CLASS)
-            self.state = 303
+            self.state = 296
             self.match(RubyParser.CLASSNAME)
-            self.state = 304
+            self.state = 297
             self.crlf()
-            self.state = 305
+            self.state = 298
             self.classBody()
-            self.state = 306
+            self.state = 299
             self.match(RubyParser.END)
         except RecognitionException as re:
             localctx.exception = re
@@ -2631,31 +2558,31 @@ class RubyParser ( Parser ):
     def classBody(self):
 
         localctx = RubyParser.ClassBodyContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 54, self.RULE_classBody)
+        self.enterRule(localctx, 52, self.RULE_classBody)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 316
+            self.state = 309
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while (((_la) & ~0x3f) == 0 and ((1 << _la) & 576460752332849152) != 0):
-                self.state = 310
+            while _la==16 or _la==59:
+                self.state = 303
                 self._errHandler.sync(self)
                 token = self._input.LA(1)
-                if token in [22, 23, 24, 59]:
-                    self.state = 308
+                if token in [59]:
+                    self.state = 301
                     self.variables()
                     pass
                 elif token in [16]:
-                    self.state = 309
+                    self.state = 302
                     self.function()
                     pass
                 else:
                     raise NoViableAltException(self)
 
-                self.state = 312
+                self.state = 305
                 self.crlf()
-                self.state = 318
+                self.state = 311
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
@@ -2711,23 +2638,23 @@ class RubyParser ( Parser ):
     def functionCall(self):
 
         localctx = RubyParser.FunctionCallContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 56, self.RULE_functionCall)
+        self.enterRule(localctx, 54, self.RULE_functionCall)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 319
+            self.state = 312
             self.match(RubyParser.ID)
-            self.state = 320
+            self.state = 313
             self.match(RubyParser.LEFTPAREN)
-            self.state = 322
+            self.state = 315
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & 1729382256913420288) != 0):
-                self.state = 321
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & -7493989779941355520) != 0):
+                self.state = 314
                 self.parameters()
 
 
-            self.state = 324
+            self.state = 317
             self.match(RubyParser.RIGHTPAREN)
         except RecognitionException as re:
             localctx.exception = re
@@ -2786,11 +2713,11 @@ class RubyParser ( Parser ):
     def assignmentOperator(self):
 
         localctx = RubyParser.AssignmentOperatorContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 58, self.RULE_assignmentOperator)
+        self.enterRule(localctx, 56, self.RULE_assignmentOperator)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 326
+            self.state = 319
             _la = self._input.LA(1)
             if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 1082331758592) != 0)):
                 self._errHandler.recoverInline(self)
@@ -2850,19 +2777,19 @@ class RubyParser ( Parser ):
     def loopBody(self):
 
         localctx = RubyParser.LoopBodyContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 60, self.RULE_loopBody)
+        self.enterRule(localctx, 58, self.RULE_loopBody)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 333
+            self.state = 326
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while (((_la) & ~0x3f) == 0 and ((1 << _la) & 3170534137698289314) != 0):
-                self.state = 328
+            while (((_la) & ~0x3f) == 0 and ((1 << _la) & 3170534137668929186) != 0):
+                self.state = 321
                 self.statement()
-                self.state = 329
+                self.state = 322
                 self.crlf()
-                self.state = 335
+                self.state = 328
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
@@ -2919,22 +2846,22 @@ class RubyParser ( Parser ):
     def assignment(self):
 
         localctx = RubyParser.AssignmentContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 62, self.RULE_assignment)
+        self.enterRule(localctx, 60, self.RULE_assignment)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 336
+            self.state = 329
             self.match(RubyParser.ID)
-            self.state = 337
+            self.state = 330
             self.assignmentOperator()
-            self.state = 340
+            self.state = 333
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [12, 60]:
-                self.state = 338
+                self.state = 331
                 self.value()
                 pass
             elif token in [59]:
-                self.state = 339
+                self.state = 332
                 self.match(RubyParser.ID)
                 pass
             else:
@@ -2994,18 +2921,18 @@ class RubyParser ( Parser ):
     def classObject(self):
 
         localctx = RubyParser.ClassObjectContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 64, self.RULE_classObject)
+        self.enterRule(localctx, 62, self.RULE_classObject)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 342
+            self.state = 335
             self.match(RubyParser.ID)
-            self.state = 343
+            self.state = 336
             self.match(RubyParser.EQUAL)
-            self.state = 344
+            self.state = 337
             self.match(RubyParser.CLASSNAME)
-            self.state = 345
+            self.state = 338
             self.match(RubyParser.DOT)
-            self.state = 346
+            self.state = 339
             self.match(RubyParser.NEW)
         except RecognitionException as re:
             localctx.exception = re
@@ -3056,14 +2983,14 @@ class RubyParser ( Parser ):
     def methodCall(self):
 
         localctx = RubyParser.MethodCallContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 66, self.RULE_methodCall)
+        self.enterRule(localctx, 64, self.RULE_methodCall)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 348
+            self.state = 341
             self.match(RubyParser.ID)
-            self.state = 349
+            self.state = 342
             self.match(RubyParser.DOT)
-            self.state = 350
+            self.state = 343
             self.functionCall()
         except RecognitionException as re:
             localctx.exception = re
@@ -3132,43 +3059,43 @@ class RubyParser ( Parser ):
     def putsFunction(self):
 
         localctx = RubyParser.PutsFunctionContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 68, self.RULE_putsFunction)
+        self.enterRule(localctx, 66, self.RULE_putsFunction)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 352
+            self.state = 345
             self.match(RubyParser.PUTS)
-            self.state = 353
+            self.state = 346
             self.match(RubyParser.LEFTPAREN)
-            self.state = 359
+            self.state = 352
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,32,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,31,self._ctx)
             if la_ == 1:
-                self.state = 354
+                self.state = 347
                 self.match(RubyParser.ID)
                 pass
 
             elif la_ == 2:
-                self.state = 355
+                self.state = 348
                 self.value()
                 pass
 
             elif la_ == 3:
-                self.state = 356
+                self.state = 349
                 self.array()
                 pass
 
             elif la_ == 4:
-                self.state = 357
+                self.state = 350
                 self.functionCall()
                 pass
 
             elif la_ == 5:
-                self.state = 358
+                self.state = 351
                 self.methodCall()
                 pass
 
 
-            self.state = 361
+            self.state = 354
             self.match(RubyParser.RIGHTPAREN)
         except RecognitionException as re:
             localctx.exception = re
@@ -3212,10 +3139,10 @@ class RubyParser ( Parser ):
     def crlf(self):
 
         localctx = RubyParser.CrlfContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 70, self.RULE_crlf)
+        self.enterRule(localctx, 68, self.RULE_crlf)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 363
+            self.state = 356
             self.match(RubyParser.NEWLINE)
         except RecognitionException as re:
             localctx.exception = re
