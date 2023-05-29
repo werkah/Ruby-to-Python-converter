@@ -140,24 +140,13 @@ class RubyVisitor(ParseTreeVisitor):
         return result[:-1]
 
     def visitElseInstruction(self, ctx: RubyParser.ElseInstructionContext):
-        # result = ""
-        # result += ctx.getChild(0).getText() + ":\n"
-        # body = self.visitLoopBody(ctx.getChild(2))
-        # body_lines = body.strip().split("\n")
-        # for line in body_lines:
-        #     result += "    " + line + "\n"
-        # return result[:-1]
         result = ""
         result += ctx.getChild(0).getText() + ":\n"
-        if ctx.getChild(2).getText().strip() == "next":
-            result += "    continue\n"
-            return result[:-1]
-        else:
-            body = self.visitLoopBody(ctx.getChild(2))
-            body_lines = body.strip().split("\n")
-            for line in body_lines:
-                result += "    " + line + "\n"
-            return result[:-1]
+        body = self.visitLoopBody(ctx.getChild(2))
+        body_lines = body.strip().split("\n")
+        for line in body_lines:
+            result += "    " + line + "\n"
+        return result[:-1]
 
     # Visit a parse tree produced by RubyParser#elsifInstruction.
     def visitElsifInstruction(self, ctx: RubyParser.ElsifInstructionContext):
@@ -250,19 +239,6 @@ class RubyVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by RubyParser#condition.
     def visitCondition(self, ctx: RubyParser.ConditionContext):
-        # result = " "
-        # for child in ctx.getChildren():
-        #     if child.getChildCount() == 0:
-        #         result += child.getText()
-        #     if child == ctx.comparisonOperator():
-        #         result += str(self.visitComparisonOperator(child))
-        #     elif child == ctx.AND():
-        #         result += "and"
-        #     elif child == ctx.OR():
-        #         result += "or"
-        #     else:
-        #         result += str(self.visit(child))
-        # return result + ":"
         result = " "
         for i in range(0,ctx.getChildCount()):
             if str(ctx.getChild(i)) == "and":

@@ -4,7 +4,7 @@ from grammar.RubyParser import RubyParser
 from grammar.RubyVisitor import RubyVisitor
 
 def main():
-    inp = FileStream("examples/classes.rb")
+    inp = FileStream("examples/instructions.rb")
     lexer = RubyLexer(inp)
     stream = CommonTokenStream(lexer)
 
