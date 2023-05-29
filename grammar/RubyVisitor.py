@@ -239,19 +239,31 @@ class RubyVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by RubyParser#condition.
     def visitCondition(self, ctx: RubyParser.ConditionContext):
+        # result = " "
+        # for child in ctx.getChildren():
+        #     if child.getChildCount() == 0:
+        #         result += child.getText()
+        #     if child == ctx.comparisonOperator():
+        #         result += str(self.visitComparisonOperator(child))
+        #     elif child == ctx.AND():
+        #         result += "and"
+        #     elif child == ctx.OR():
+        #         result += "or"
+        #     else:
+        #         result += str(self.visit(child))
+        # return result + ":"
         result = " "
-        for child in ctx.getChildren():
-            if child.getChildCount() == 0:
-                result += child.getText()
-            elif child == ctx.comparisonOperator():
-                result += str(self.visit(child))
-            elif child == ctx.AND():
-                result += "and"
-            elif child == ctx.OR():
-                result += "or"
+        for i in range(0,ctx.getChildCount()):
+            if str(ctx.getChild(i)) == "and":
+                result += " and "
+            elif str(ctx.getChild(i)) == "or":
+                result += " or "
+            elif ctx.getChild(i).getChildCount() == 0:
+                 result += ctx.getChild(i).getText()
             else:
-                result += str(self.visit(child))
-        return result + ":"
+                result += str(self.visit(ctx.getChild(i)))
+        return result+":"
+
 
     # Visit a parse tree produced by RubyParser#variables.
     def visitVariables(self, ctx: RubyParser.VariablesContext):  # ok
