@@ -61,7 +61,6 @@ ID=60
 NUMBER=61
 COMMENT=62
 WHITE_SPACE=63
-NEXT=64
 'if'=1
 'elsif'=2
 'else'=3
@@ -118,4 +117,3 @@ NEXT=64
 '='=57
 '.'=58
 'puts'=59
-'next'=64

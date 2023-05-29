@@ -314,14 +314,5 @@ class RubyListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by RubyParser#crlf.
-    def enterCrlf(self, ctx:RubyParser.CrlfContext):
-        pass
-
-    # Exit a parse tree produced by RubyParser#crlf.
-    def exitCrlf(self, ctx:RubyParser.CrlfContext):
-        pass
-
-
 
 del RubyParser

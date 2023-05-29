@@ -435,9 +435,4 @@ class RubyVisitor(ParseTreeVisitor):
             res = res.replace("puts", "print")
         return res
 
-    # Visit a parse tree produced by RubyParser#crlf.
-    def visitCrlf(self, ctx: RubyParser.CrlfContext):  # ok?
-        return "\n"
-
-
 del RubyParser
