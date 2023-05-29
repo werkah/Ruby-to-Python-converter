@@ -140,13 +140,24 @@ class RubyVisitor(ParseTreeVisitor):
         return result[:-1]
 
     def visitElseInstruction(self, ctx: RubyParser.ElseInstructionContext):
+        # result = ""
+        # result += ctx.getChild(0).getText() + ":\n"
+        # body = self.visitLoopBody(ctx.getChild(2))
+        # body_lines = body.strip().split("\n")
+        # for line in body_lines:
+        #     result += "    " + line + "\n"
+        # return result[:-1]
         result = ""
         result += ctx.getChild(0).getText() + ":\n"
-        body = self.visitLoopBody(ctx.getChild(2))
-        body_lines = body.strip().split("\n")
-        for line in body_lines:
-            result += "    " + line + "\n"
-        return result[:-1]
+        if ctx.getChild(2).getText().strip() == "next":
+            result += "    continue\n"
+            return result[:-1]
+        else:
+            body = self.visitLoopBody(ctx.getChild(2))
+            body_lines = body.strip().split("\n")
+            for line in body_lines:
+                result += "    " + line + "\n"
+            return result[:-1]
 
     # Visit a parse tree produced by RubyParser#elsifInstruction.
     def visitElsifInstruction(self, ctx: RubyParser.ElsifInstructionContext):
@@ -400,12 +411,10 @@ class RubyVisitor(ParseTreeVisitor):
         for i in range(0, ctx.getChildCount()):
             if ctx.getChild(i) == ctx.ID():
                 result = str(ctx.ID().getText())
-            elif ctx.getChild(i) == ctx.DOT():
-                result += str(ctx.DOT().getText())
             elif ctx.getChild(i) == ctx.CLASSNAME():
                 result += str(ctx.CLASSNAME().getText())
             elif ctx.getChild(i) == ctx.NEW():
-                result += str(ctx.NEW().getText())
+                result += "()"
             elif ctx.getChild(i) == ctx.EQUAL():
                 result += str(ctx.EQUAL().getText())
         return result
