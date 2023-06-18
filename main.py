@@ -6,19 +6,19 @@ import PySimpleGUI as sg
 
 
 def main():
-    sg.theme('DarkAmber')
+    sg.theme('SystemDefaultForReal')
     layout = [
-        [sg.Text("Wybierz przykładowy plik do konwersji:")],
-        [sg.Input(key="-FILE-"), sg.FileBrowse()],
-        [sg.Button("Konwertuj"), sg.Button("Wyjście")],
+        [sg.Text("Select a file to convert:", font='Helvetica 14')],
+        [sg.Input(key="-FILE-"), sg.FileBrowse(font='Helvetica 14')],
+        [sg.Button("Convert", key="-CONVERT-", font='Helvetica 14'), sg.Button("Quit", key="-QUIT-",font='Helvetica 14')],
         [sg.Output(size=(60, 20), key="-OUTPUT-")]
     ]
     window = sg.Window("Ruby to Python Converter", layout)
     while True:
         event, values = window.read()
-        if event == sg.WINDOW_CLOSED or event == "Wyjście":
+        if event == sg.WINDOW_CLOSED or event == "-QUIT-":
             break
-        if event == "Konwertuj":
+        if event == "-CONVERT-":
             file_path = values["-FILE-"]
             if file_path:
                 try:
@@ -36,7 +36,7 @@ def main():
                 except Exception as e:
                     print(f"Error: {str(e)}")
             else:
-                print("Wybierz plik do konwersji!")
+                print("Select file to convert!")
     window.close()
 
 
