@@ -42,7 +42,7 @@ operator: PLUS | MINUS | MUL | DIVIDE | MOD | MULMUL | PLUSPLUS | MINUSMINUS;
 
 condition: (ID comparisonOperator (value|bool) | value comparisonOperator value | ID comparisonOperator ID) ((AND | OR) (ID comparisonOperator value | value comparisonOperator value | ID comparisonOperator ID))*;
 
-variables: ID EQUAL (value | ID | array | mathOperation|bool);
+variables: ID EQUAL (value | ID | array | mathOperation | bool);
 
 mathOperation: (ID | value | bracketExpression) (operator (ID | value | bracketExpression))*;
 
