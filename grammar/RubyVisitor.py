@@ -438,7 +438,10 @@ class RubyVisitor(ParseTreeVisitor):
         result = ""
         for i in range(0, ctx.getChildCount()):
             if ctx.getChild(i) == ctx.ID():
-                result = str(ctx.ID().getText())
+                objct_id = str(ctx.ID().getText())
+                if objct_id not in self.objects:
+                    error = f"Object '{objct_id}' is not declared."
+                    self.errors.append(error)
             elif ctx.getChild(i) == ctx.DOT():
                 result += str(ctx.DOT().getText())
             elif ctx.getChild(i) == ctx.functionCall():
