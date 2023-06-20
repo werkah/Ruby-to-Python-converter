@@ -11,6 +11,6 @@ unless x>=2
    puts("less")
 else
    puts("greater")
-end;
+end
 
 

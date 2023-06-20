@@ -184,7 +184,12 @@ class RubyVisitor(ParseTreeVisitor):
     def visitForLoop(self, ctx: RubyParser.ForLoopContext):
         result = ""
         result += ctx.getChild(0).getText() + " "
-        result += ctx.getChild(1).getText() + " "
+        # result += ctx.getChild(1).getText() + " "
+        if ctx.getChild(1).getText() in self.vars:
+            result += ctx.getChild(1).getText() + " "
+        else:
+            self.vars.append(ctx.getChild(1).getText())
+            result += ctx.getChild(1).getText() + " "
         result += ctx.getChild(2).getText() + " "
         result += ctx.getChild(3).getText() + ":\n"
         body = str(self.visitLoopBody(ctx.getChild(5)))
@@ -246,7 +251,7 @@ class RubyVisitor(ParseTreeVisitor):
             return '--'
 
     # Visit a parse tree produced by RubyParser#condition.
-    def visitCondition(self, ctx: RubyParser.ConditionContext): #do naprawy
+    def visitCondition(self, ctx: RubyParser.ConditionContext):
         result = " "
         for i in range(0, ctx.getChildCount()):
             if str(ctx.getChild(i)) == "and":
@@ -254,30 +259,56 @@ class RubyVisitor(ParseTreeVisitor):
             elif str(ctx.getChild(i)) == "or":
                 result += " or "
             elif ctx.getChild(i).getChildCount() == 0:
-                result += ctx.getChild(i).getText()
+                if ctx.getChild(i).getText() in self.vars:
+                    result += ctx.getChild(i).getText()
+                else:
+                    error = f"Variable '{ctx.getChild(i).getText()}' does not exist."
+                    self.errors.append(error)
             else:
                 result += str(self.visit(ctx.getChild(i)))
         return result + ":"
 
     # Visit a parse tree produced by RubyParser#variables.
-    def visitVariables(self, ctx: RubyParser.VariablesContext): #do naprawy
+    def visitVariables(self, ctx: RubyParser.VariablesContext):
         res = ""
-        for child in ctx.children:
-            if child.getChildCount() == 0:
-                res += child.getText()
-            else:
-                res += str(self.visit(child))
-        return res
+        if ctx.getChild(0) not in self.vars:
+            self.vars.append(ctx.getChild(0).getText())
+            res += ctx.getChild(0).getText()
+            res += ctx.getChild(1).getText()
+        else:
+            res += ctx.getChild(0).getText()
+            res += ctx.getChild(1).getText()
 
-    # Visit a parse tree produced by RubyParser#mathOperation.
-    def visitMathOperation(self, ctx: RubyParser.MathOperationContext): #do naprawy
-        result = ""
-        for child in ctx.children:
-            if child.getChildCount() == 0:
-                result += child.getText()
+        if ctx.getChild(2) == ctx.value():
+            res += str(self.visit(ctx.getChild(2)))
+        if ctx.getChild(2) != ctx.mathOperation() and ctx.getChild(2) != ctx.value() and ctx.getChild(2) != ctx.array() \
+                and ctx.getChild(2) != ctx.bool_() and ctx.EQUAL():
+            if ctx.getChild(2).getText() in self.vars:
+                res += ctx.getChild(2).getText()
             else:
-                result += str(self.visit(child))
+                error = f"Variable '{ctx.getChild(2).getText()}' does not exist."
+                self.errors.append(error)
+        if ctx.getChild(2) == ctx.mathOperation():
+            res += str(self.visit(ctx.getChild(2)))
+        if ctx.getChild(2) == ctx.array():
+            res += str(self.visit(ctx.getChild(2)))
+        if ctx.getChild(2) == ctx.bool_():
+            res += str(self.visit(ctx.getChild(2)))
+        return res
+    # Visit a parse tree produced by RubyParser#mathOperation.
+    def visitMathOperation(self, ctx: RubyParser.MathOperationContext):
+        result = ""
+        for i in range(0, ctx.getChildCount()):
+            if ctx.getChild(i).getChildCount() == 0:
+                if ctx.getChild(i).getText() in self.vars:
+                    result += ctx.getChild(i).getText()
+                else:
+                    error = f"Variable '{ctx.getChild(i).getText()}' does not exist."
+                    self.errors.append(error)
+            else:
+                result += str(self.visit(ctx.getChild(i)))
         return result
+
 
     # Visit a parse tree produced by RubyParser#bracketExpression.
     def visitBracketExpression(self, ctx: RubyParser.BracketExpressionContext):
@@ -326,7 +357,11 @@ class RubyVisitor(ParseTreeVisitor):
     def visitParameters(self, ctx: RubyParser.ParametersContext):
         result = ""
         for i in range(0, ctx.getChildCount()):
-            result += ctx.getChild(i).getText()
+            if ctx.getChild(i).getText() in self.vars:
+                result += ctx.getChild(i).getText()
+            else:
+                self.vars.append(ctx.getChild(i).getText())
+                result += ctx.getChild(i).getText()
         return result
 
     # Visit a parse tree produced by RubyParser#class.
@@ -403,14 +438,20 @@ class RubyVisitor(ParseTreeVisitor):
         return res
 
     # Visit a parse tree produced by RubyParser#assignment.
-    def visitAssignment(self, ctx: RubyParser.AssignmentContext): #do naprawy
+    def visitAssignment(self, ctx: RubyParser.AssignmentContext):
         res = ""
-        for child in ctx.children:
-            if child.getChildCount() == 0:
-                res += child.getText()
+        for i in range(0, ctx.getChildCount()):
+            if ctx.getChild(i).getChildCount() == 0:
+                if ctx.getChild(i).getText() in self.vars:
+                    res += ctx.getChild(i).getText()
+                else:
+                    error = f"Variable'{ctx.getChild(i).getText()}' does not exist."
+                    self.errors.append(error)
             else:
-                res += str(self.visit(child))
+                res += str(self.visit(ctx.getChild(i)))
         return res
+
+
 
     # Visit a parse tree produced by RubyParser#classObject.
     def visitClassObject(self, ctx: RubyParser.ClassObjectContext):
@@ -442,6 +483,8 @@ class RubyVisitor(ParseTreeVisitor):
                 if objct_id not in self.objects:
                     error = f"Object '{objct_id}' is not declared."
                     self.errors.append(error)
+                else:
+                    result += objct_id
             elif ctx.getChild(i) == ctx.DOT():
                 result += str(ctx.DOT().getText())
             elif ctx.getChild(i) == ctx.functionCall():
@@ -449,17 +492,23 @@ class RubyVisitor(ParseTreeVisitor):
         return result
 
     # Visit a parse tree produced by RubyParser#putsFunction.
-    def visitPutsFunction(self, ctx: RubyParser.PutsFunctionContext): #do naprawy po zrobieniu var
+    def visitPutsFunction(self, ctx: RubyParser.PutsFunctionContext):
         res = ""
         children = ctx.children
+
         for child in children:
             if child.getChildCount() == 0:
                 res += child.getText()
             else:
                 res += str(self.visit(child))
+
         if children[0].getText() == "puts":
             res = res.replace("puts", "print")
-        return res
+        if ctx.getChild(2).getText() == ctx.ID():
+            id_name = ctx.getChild(2).getText()
+            if id_name not in self.vars:
+                raise ValueError(f"Variable '{id_name}' is not declared.")
 
+        return res
 
 del RubyParser
