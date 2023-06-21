@@ -167,6 +167,9 @@ def test(a1, a2, a3)
 end
 test(2,3, "ala");
 ```
+- Output window:
+  
+<img width="350" alt="image" src="https://github.com/werkah/Ruby-to-Python-converter/assets/92488733/f490212c-45c0-48e6-ac97-e30873365e93">
 
 
 
