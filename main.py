@@ -57,10 +57,12 @@ def main():
                             output.write(res)
                             output.close()
                             output_element.update(res)
-                            input_file = open(file_path, "r")
-                            input_element.update(input_file.read())
+                        input_file = open(file_path, "r")
+                        input_element.update(input_file.read())
                     except ValueError as e:
                         output_element.print("")
+                        input_file = open(file_path, "r")
+                        input_element.update(input_file.read())
                 else:
                     output_element.print("Enter a filename to save the output!")
             else:

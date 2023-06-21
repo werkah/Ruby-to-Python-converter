@@ -145,7 +145,7 @@ python3 main.py
 - select the desired Ruby code file and enter the output file name
 - click the `Convert` button
 - if the conversion is successful, the converted code will be displayed in the output window next to the window with input file content, and the output file will be saved in the main folder
-- in case of errors in the Ruby code, an error message will be displayed in the output window, and the output file will not be created
+- in case of errors in the Ruby code, an error message will be displayed in the output window next to the window with input file content, and the output file will not be created
 
 ## Example of use
 
