@@ -30,6 +30,7 @@ def main():
         if event == sg.WINDOW_CLOSED or event == "-QUIT-":
             break
         if event == "-CONVERT-":
+            output_element.update("")
             file_path = values["-FILE-"]
             output_filename = values["-OUTPUT-"]
             if file_path:
