@@ -149,4 +149,7 @@ python3 main.py
 
 ## Example of use
 
+<img width="791" alt="image" src="https://github.com/werkah/Ruby-to-Python-converter/assets/92488733/788d2f5d-3ac1-4f8e-bed7-6b023323ce80">
+
+
 
