@@ -15,22 +15,25 @@ class GUIErrorListener(ConsoleErrorListener):
 def main():
     sg.theme('DarkGreen3')
     layout = [
+        [sg.Text("Ruby to Python Converter", font='Helvetica 15')],
         [sg.Text("Select a file to convert:", font='Helvetica 13')],
-        [sg.Input(key="-FILE-"), sg.FileBrowse(font='Helvetica 11')],
+        [sg.Input(key="-FILE-", size=(30, 1), font='Helvetica 11'), sg.FileBrowse(font='Helvetica 11')],
         [sg.Text("Output Filename:", font='Helvetica 13')],
-        [sg.Input(key="-OUTPUT-", font='Helvetica 11')],
-        [sg.Button("Convert", key="-CONVERT-", font='Helvetica 11'),
-         sg.Button("Quit", key="-QUIT-", font='Helvetica 11')],
-        [sg.Output(size=(60, 20), key="-OUTPUT_LOG-")]
+        [sg.Input(key="-OUTPUT-", size=(30, 1), font='Helvetica 11')],
+        [sg.Button("Convert", key="-CONVERT-", font='Helvetica 11'),sg.Button("Quit", key="-QUIT-", font='Helvetica 11')],
+        [sg.Column([[sg.Text("Input File:", font='Helvetica 13')],[sg.Multiline(size=(60, 20), key="-INPUT_TEXT-", disabled=True, font='Helvetica 11')]]),
+         sg.Column([[sg.Text("Output:", font='Helvetica 13')],[sg.Output(size=(60, 20), key="-OUTPUT_LOG-", font='Helvetica 11')]])]
     ]
     window = sg.Window("Ruby to Python Converter", layout)
     output_element = window["-OUTPUT_LOG-"]
+    input_element = window["-INPUT_TEXT-"]
     while True:
         event, values = window.read()
         if event == sg.WINDOW_CLOSED or event == "-QUIT-":
             break
         if event == "-CONVERT-":
             output_element.update("")
+            input_element.update("")
             file_path = values["-FILE-"]
             output_filename = values["-OUTPUT-"]
             if file_path:
@@ -54,6 +57,8 @@ def main():
                             output.write(res)
                             output.close()
                             output_element.update(res)
+                            input_file = open(file_path, "r")
+                            input_element.update(input_file.read())
                     except ValueError as e:
                         output_element.print("")
                 else:

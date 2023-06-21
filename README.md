@@ -141,34 +141,12 @@ pip install antlr4-python3-runtime
 ``` shell
 python3 main.py
 ```
-- after running the program, a window will appear with options to select a file for conversion and enter an output file name
+- after running the program, a window will appear with options to select a file for conversion by using `Browse` button and enter an output file name
 - select the desired Ruby code file and enter the output file name
 - click the `Convert` button
-- if the conversion is successful, the converted code will be displayed in the window, and the output file will be saved in the main folder
-- in case of errors in the Ruby code, an error message will be displayed in the window, and the output file will not be created
+- if the conversion is successful, the converted code will be displayed in the output window next to the window with input file content, and the output file will be saved in the main folder
+- in case of errors in the Ruby code, an error message will be displayed in the output window, and the output file will not be created
 
 ## Example of use
-- Ruby code:
-``` ruby
-def test(a1, a2, a3)
-    puts(a3)
-    if a1 > a2
-        puts("a1 is bigger than a2");puts("a1 is bigger than a3")
-    else
-        puts("a1 is smaller than a2")
-    end
-    arrr = [1,5,7,8]
-    for i in arrr
-        if i > a1
-            puts(i)
-        end
-    end
-end
-test(2,3, "ala");
-```
-- Output window:
-  
-<img width="350" alt="image" src="https://github.com/werkah/Ruby-to-Python-converter/assets/92488733/f490212c-45c0-48e6-ac97-e30873365e93">
-
 
 
