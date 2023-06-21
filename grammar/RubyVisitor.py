@@ -18,7 +18,6 @@ class RubyVisitor(ParseTreeVisitor):
         self.objects = []
         self.errors = []
 
-
     # Visit a parse tree produced by RubyParser#program.
     def visitProgram(self, ctx: RubyParser.ProgramContext):
         return self.visitChildren(ctx)
@@ -184,7 +183,6 @@ class RubyVisitor(ParseTreeVisitor):
     def visitForLoop(self, ctx: RubyParser.ForLoopContext):
         result = ""
         result += ctx.getChild(0).getText() + " "
-        # result += ctx.getChild(1).getText() + " "
         if ctx.getChild(1).getText() in self.vars:
             result += ctx.getChild(1).getText() + " "
         else:
@@ -278,7 +276,6 @@ class RubyVisitor(ParseTreeVisitor):
         else:
             res += ctx.getChild(0).getText()
             res += ctx.getChild(1).getText()
-
         if ctx.getChild(2) == ctx.value():
             res += str(self.visit(ctx.getChild(2)))
         if ctx.getChild(2) != ctx.mathOperation() and ctx.getChild(2) != ctx.value() and ctx.getChild(2) != ctx.array() \
@@ -295,6 +292,7 @@ class RubyVisitor(ParseTreeVisitor):
         if ctx.getChild(2) == ctx.bool_():
             res += str(self.visit(ctx.getChild(2)))
         return res
+
     # Visit a parse tree produced by RubyParser#mathOperation.
     def visitMathOperation(self, ctx: RubyParser.MathOperationContext):
         result = ""
@@ -308,7 +306,6 @@ class RubyVisitor(ParseTreeVisitor):
             else:
                 result += str(self.visit(ctx.getChild(i)))
         return result
-
 
     # Visit a parse tree produced by RubyParser#bracketExpression.
     def visitBracketExpression(self, ctx: RubyParser.BracketExpressionContext):
@@ -451,8 +448,6 @@ class RubyVisitor(ParseTreeVisitor):
                 res += str(self.visit(ctx.getChild(i)))
         return res
 
-
-
     # Visit a parse tree produced by RubyParser#classObject.
     def visitClassObject(self, ctx: RubyParser.ClassObjectContext):
         result = ""
@@ -495,20 +490,19 @@ class RubyVisitor(ParseTreeVisitor):
     def visitPutsFunction(self, ctx: RubyParser.PutsFunctionContext):
         res = ""
         children = ctx.children
-
         for child in children:
             if child.getChildCount() == 0:
                 res += child.getText()
             else:
                 res += str(self.visit(child))
-
         if children[0].getText() == "puts":
             res = res.replace("puts", "print")
         if ctx.getChild(2).getText() == ctx.ID():
             id_name = ctx.getChild(2).getText()
             if id_name not in self.vars:
-                raise ValueError(f"Variable '{id_name}' is not declared.")
-
+                error = f"Variable '{id_name}' is not declared."
+                self.errors.append(error)
         return res
+
 
 del RubyParser

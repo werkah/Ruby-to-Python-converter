@@ -1,6 +1,7 @@
 class Sample
     i=0
-   def hello()
+    def hello(o)
+        puts(o)
         puts("Hello")
     end
     def function(a, b)
@@ -21,9 +22,5 @@ class Sample
     end
 end
 object = Sample.new
-object.hello()
+object.hello("ala")
 object.function(1,2)
-
-
-
-
