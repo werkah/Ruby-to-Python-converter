@@ -5,7 +5,6 @@
 - Karolina Surówka
 
 ## Introduction
-Introduction
 The Ruby to Python Converter is a program that aims to convert Ruby code to Python code. It provides a user-friendly GUI for easy file selection and conversion. The converter utilizes the PySimpleGUI library for creating the user interface and the ANTLR4 parser generator for parsing the Ruby code.
 ## Program overview
 
