@@ -1,4 +1,4 @@
-def test(a1, a2, a3)
+def tes(a1, a2, a3)
     puts(a3)
     if a1 > a2
         puts("a1 is bigger than a2");puts("a1 is bigger than a3")
@@ -12,4 +12,4 @@ def test(a1, a2, a3)
         end
     end
 end
-test(2,3, "ala");
+tes(2,3, "ala");

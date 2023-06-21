@@ -318,13 +318,16 @@ class RubyVisitor(ParseTreeVisitor):
             class_function_list = getattr(self, self.current_class, [])
             class_function_list.append(function_name)
             setattr(self, self.current_class, class_function_list)
+            parameters = f"self, {self.visitParameters(ctx.getChild(3))}"
         elif function_name in self.functions:
             error = f"Function '{function_name}' is already declared."
             self.errors.append(error)
+            parameters = self.visitParameters(ctx.getChild(3))
         else:
             self.functions.append(function_name)
+            parameters = self.visitParameters(ctx.getChild(3))
+
         if self.visitParameters(ctx.getChild(3)) != "":
-            parameters = (self.visitParameters(ctx.getChild(3)))
             body = str(self.visitLoopBody(ctx.getChild(6)))
             indent = "    "
             result = f"def {function_name}({parameters}):\n"
@@ -339,7 +342,7 @@ class RubyVisitor(ParseTreeVisitor):
         else:
             body = str(self.visitLoopBody(ctx.getChild(5)))
             indent = "    "
-            result = f"def {function_name}():\n"
+            result = f"def {function_name}({parameters}):\n"
             body_lines = body.strip().split("\n")
             if body_lines:
                 result += "\n".join(indent + line for line in body_lines)
